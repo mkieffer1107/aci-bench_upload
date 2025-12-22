@@ -30,7 +30,7 @@ The dataset now lives [on HuggingFace](https://huggingface.co/datasets/mkieffer/
 ```sh
 cd aci-bench-medarc
 chmod +x run.sh
-./aci-bench-medarc/run.sh --username <username> \
+./run.sh --username <username> \
          --repo ACI-Bench-MedARC \
          --private false
 ```

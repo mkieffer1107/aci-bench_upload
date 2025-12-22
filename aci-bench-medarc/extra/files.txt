@@ -1,0 +1,37 @@
+challenge data:
+    base url: 
+        https://raw.githubusercontent.com/wyim/aci-bench/main/data/challenge_data/
+    files:
+        clinicalnlp_taskB_test1.csv
+        clinicalnlp_taskC_test2.csv
+        clef_taskC_test3.csv
+        train.csv
+        valid.csv
+    transcript_version:
+        aci: asr
+        virtassist: humantrans
+        virtscribe: humantrans
+
+
+ablations:
+    base url: 
+        https://github.com/wyim/aci-bench/blob/main/data/src_experiment_data/
+    files:
+        test1_aci_asr.csv
+        test1_aci_asrcorr.csv
+        test1_virtscribe_asr.csv
+        test1_virtscribe_humantrans.csv
+        test2_aci_asr.csv
+        test2_aci_asrcorr.csv
+        test2_virtscribe_asr.csv
+        test2_virtscribe_humantrans.csv
+        test3_aci_asr.csv
+        test3_aci_asrcorr.csv
+        test3_virtscribe_asr.csv
+        test3_virtscribe_humantrans.csv
+        train_aci_asrcorr.csv
+        train_virtscribe_asr.csv
+        valid_aci_asr.csv
+        valid_aci_asrcorr.csv
+        valid_virtscribe_asr.csv
+        valid_virtscribe_humantrans.csv

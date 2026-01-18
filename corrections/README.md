@@ -5,7 +5,7 @@ Many of the ACI-Bench data entries contain swapped speaker tags. We ran each tra
 
 To run yourself, simply run
 
-```py
+```sh
 find_errors.py
 ```
 

@@ -1,6 +1,7 @@
 # What is this?
 
-Many of the ACI-Bench data entries contain swapped speaker tags. We ran each transcript through a group of LLMs (GPT-5 mini, Grok 4.1 Fast, and Gemini 3 Flash Preview) to identify, as best as possible with a minimal setup, all such instances.
+Many of the ACI-Bench data entries contain swapped speaker tags. We ran each transcript through a group of LLMs (GPT-5 mini, Grok 4.1 Fast, and Gemini 3 Flash Preview) to identify, as best as possible with a minimal setup, all such instances. If at least one model detected an error in a transcript, we flagged it and saved the analysis from each LLM.
+
 
 To run yourself, simply run
 

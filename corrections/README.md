@@ -57,8 +57,8 @@ Note that we have not implemented any corrections yet.
 
 **By subset and transcript version:**
 
-A few things to notics:
-1) All models agreed that both transcript versions of `aci`, `asr` (default asr) and `asrcorr` (human corrections to `asr`), contain errors. This means that the human edits to `asr` only 
+A few things to notice:
+1) All models agreed that both transcript versions of `aci`, `asr` (default asr) and `asrcorr` (human corrections to `asr`), contain errors. This means that the human edits to `asr` only corrected text *within* speaker turns ("nonsmile" in D2N081 --> "non-small" in ACI006).
 2) The `virtassist` subset only contains one transcript version, `humantrans`, meaning a human transcribed these audio recordings. As expected, there is a low error rate.
 3) The `virtscribe` subset contains two transcription types. The first, `asr`, has a high error rate. However, when those same audio recordings were transcribed by humans, `humantrans`, only one error exists. Looking more closely at that record, only one model finds an error, and we believe that it was confused because there is a third speaker tag, [patient_guest], preceding the section it marked as erroneous.
 

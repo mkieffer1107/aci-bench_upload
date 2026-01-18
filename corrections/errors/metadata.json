@@ -1,0 +1,230 @@
+{
+  "summary": {
+    "total_notes_with_errors": 108,
+    "total_notes_processed": 359,
+    "majority_consensus_errors": 84
+  },
+  "by_subset": {
+    "aci": {
+      "total_notes": 224,
+      "notes_with_errors": 68,
+      "error_percentage": 30.36,
+      "all_models_found_errors": 42,
+      "majority_consensus_errors": 54
+    },
+    "virtassist": {
+      "total_notes": 55,
+      "notes_with_errors": 5,
+      "error_percentage": 9.09,
+      "all_models_found_errors": 1,
+      "majority_consensus_errors": 1
+    },
+    "virtscribe": {
+      "total_notes": 80,
+      "notes_with_errors": 35,
+      "error_percentage": 43.75,
+      "all_models_found_errors": 24,
+      "majority_consensus_errors": 29
+    }
+  },
+  "by_split": {
+    "train": {
+      "total_notes": 114,
+      "notes_with_errors": 37,
+      "error_percentage": 32.46,
+      "all_models_found_errors": 21,
+      "majority_consensus_errors": 27
+    },
+    "valid": {
+      "total_notes": 35,
+      "notes_with_errors": 13,
+      "error_percentage": 37.14,
+      "all_models_found_errors": 10,
+      "majority_consensus_errors": 12
+    },
+    "test1": {
+      "total_notes": 70,
+      "notes_with_errors": 21,
+      "error_percentage": 30.0,
+      "all_models_found_errors": 17,
+      "majority_consensus_errors": 19
+    },
+    "test2": {
+      "total_notes": 70,
+      "notes_with_errors": 16,
+      "error_percentage": 22.86,
+      "all_models_found_errors": 8,
+      "majority_consensus_errors": 12
+    },
+    "test3": {
+      "total_notes": 70,
+      "notes_with_errors": 21,
+      "error_percentage": 30.0,
+      "all_models_found_errors": 11,
+      "majority_consensus_errors": 14
+    }
+  },
+  "by_subset_and_split": {
+    "aci": {
+      "train": {
+        "total_notes": 70,
+        "notes_with_errors": 25,
+        "error_percentage": 35.71,
+        "all_models_found_errors": 15,
+        "majority_consensus_errors": 19
+      },
+      "valid": {
+        "total_notes": 22,
+        "notes_with_errors": 9,
+        "error_percentage": 40.91,
+        "all_models_found_errors": 6,
+        "majority_consensus_errors": 8
+      },
+      "test1": {
+        "total_notes": 44,
+        "notes_with_errors": 16,
+        "error_percentage": 36.36,
+        "all_models_found_errors": 13,
+        "majority_consensus_errors": 15
+      },
+      "test2": {
+        "total_notes": 44,
+        "notes_with_errors": 8,
+        "error_percentage": 18.18,
+        "all_models_found_errors": 3,
+        "majority_consensus_errors": 6
+      },
+      "test3": {
+        "total_notes": 44,
+        "notes_with_errors": 10,
+        "error_percentage": 22.73,
+        "all_models_found_errors": 5,
+        "majority_consensus_errors": 6
+      }
+    },
+    "virtassist": {
+      "train": {
+        "total_notes": 20,
+        "notes_with_errors": 2,
+        "error_percentage": 10.0,
+        "all_models_found_errors": 0,
+        "majority_consensus_errors": 0
+      },
+      "valid": {
+        "total_notes": 5,
+        "notes_with_errors": 0,
+        "error_percentage": 0.0,
+        "all_models_found_errors": 0,
+        "majority_consensus_errors": 0
+      },
+      "test1": {
+        "total_notes": 10,
+        "notes_with_errors": 0,
+        "error_percentage": 0.0,
+        "all_models_found_errors": 0,
+        "majority_consensus_errors": 0
+      },
+      "test2": {
+        "total_notes": 10,
+        "notes_with_errors": 1,
+        "error_percentage": 10.0,
+        "all_models_found_errors": 0,
+        "majority_consensus_errors": 0
+      },
+      "test3": {
+        "total_notes": 10,
+        "notes_with_errors": 2,
+        "error_percentage": 20.0,
+        "all_models_found_errors": 1,
+        "majority_consensus_errors": 1
+      }
+    },
+    "virtscribe": {
+      "train": {
+        "total_notes": 24,
+        "notes_with_errors": 10,
+        "error_percentage": 41.67,
+        "all_models_found_errors": 6,
+        "majority_consensus_errors": 8
+      },
+      "valid": {
+        "total_notes": 8,
+        "notes_with_errors": 4,
+        "error_percentage": 50.0,
+        "all_models_found_errors": 4,
+        "majority_consensus_errors": 4
+      },
+      "test1": {
+        "total_notes": 16,
+        "notes_with_errors": 5,
+        "error_percentage": 31.25,
+        "all_models_found_errors": 4,
+        "majority_consensus_errors": 4
+      },
+      "test2": {
+        "total_notes": 16,
+        "notes_with_errors": 7,
+        "error_percentage": 43.75,
+        "all_models_found_errors": 5,
+        "majority_consensus_errors": 6
+      },
+      "test3": {
+        "total_notes": 16,
+        "notes_with_errors": 9,
+        "error_percentage": 56.25,
+        "all_models_found_errors": 5,
+        "majority_consensus_errors": 7
+      }
+    }
+  },
+  "by_transcript_version": {
+    "humantrans": {
+      "notes_with_errors": 6,
+      "all_models_found_errors": 1,
+      "majority_consensus_errors": 1
+    },
+    "asr": {
+      "notes_with_errors": 68,
+      "all_models_found_errors": 46,
+      "majority_consensus_errors": 56
+    },
+    "asrcorr": {
+      "notes_with_errors": 34,
+      "all_models_found_errors": 20,
+      "majority_consensus_errors": 27
+    }
+  },
+  "by_subset_and_transcript_version": {
+    "aci": {
+      "asr": {
+        "notes_with_errors": 34,
+        "all_models_found_errors": 22,
+        "majority_consensus_errors": 27
+      },
+      "asrcorr": {
+        "notes_with_errors": 34,
+        "all_models_found_errors": 20,
+        "majority_consensus_errors": 27
+      }
+    },
+    "virtassist": {
+      "humantrans": {
+        "notes_with_errors": 5,
+        "all_models_found_errors": 1,
+        "majority_consensus_errors": 1
+      }
+    },
+    "virtscribe": {
+      "humantrans": {
+        "notes_with_errors": 1,
+        "all_models_found_errors": 0,
+        "majority_consensus_errors": 0
+      },
+      "asr": {
+        "notes_with_errors": 34,
+        "all_models_found_errors": 24,
+        "majority_consensus_errors": 29
+      }
+    }
+  }
+}

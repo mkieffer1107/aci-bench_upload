@@ -65,6 +65,12 @@ def normalize_dataset_name(name: str) -> str:
     return (name or "").strip().lower()
 
 
+def enumerate_dialogue(dialogue: str) -> str:
+    """Prepend 1-based line numbers to each line of dialogue."""
+    lines = dialogue.split("\n")
+    return "\n".join(f"{i+1} {line}" for i, line in enumerate(lines))
+
+
 def load_challenge_csv_items(
     filepath: str,
     *,
@@ -99,10 +105,12 @@ def load_challenge_csv_items(
                     f"Expected one of: {sorted(transcript_version_by_subset.keys())}"
                 )
 
+            dialogue = normalize_text(row.get("dialogue", ""), ascii_normalize=ascii_normalize)
             record = {
                 "encounter_id": normalize_text(row.get("encounter_id", ""), ascii_normalize=ascii_normalize),
                 "transcript_version": tv,
-                "dialogue": normalize_text(row.get("dialogue", ""), ascii_normalize=ascii_normalize),
+                "dialogue": dialogue,
+                "enumerated_dialogue": enumerate_dialogue(dialogue),
                 "note": normalize_text(row.get("note", ""), ascii_normalize=ascii_normalize),
             }
             items.append((subset, record))
@@ -163,12 +171,14 @@ def load_ablation_csv_records(
 
         for row in reader:
             enc_id = normalize_text(row.get(id_field, ""), ascii_normalize=ascii_normalize) if id_field else ""
+            dialogue = normalize_text(row.get("dialogue", ""), ascii_normalize=ascii_normalize)
 
             records.append(
                 {
                     "encounter_id": enc_id,
                     "transcript_version": normalize_text(transcript_version, ascii_normalize=ascii_normalize),
-                    "dialogue": normalize_text(row.get("dialogue", ""), ascii_normalize=ascii_normalize),
+                    "dialogue": dialogue,
+                    "enumerated_dialogue": enumerate_dialogue(dialogue),
                     "note": normalize_text(row.get("note", ""), ascii_normalize=ascii_normalize),
                 }
             )
@@ -301,6 +311,7 @@ def main() -> None:
             "encounter_id": Value("string"),
             "transcript_version": Value("string"),
             "dialogue": Value("string"),
+            "enumerated_dialogue": Value("string"),
             "note": Value("string"),
         }
     )
@@ -386,7 +397,6 @@ def main() -> None:
     readme_path = os.path.join(upload_root, "README.md")
     write_readme_with_configs(
         readme_path,
-        repo_title=hf_repo_name,
         configs=CONFIGS,
         splits=SPLITS,
     )

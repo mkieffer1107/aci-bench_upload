@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
 ## Citation 
 
-```
+```bibtex
 @article{aci-bench,
   author = {Wen{-}wai Yim and
                 Yujuan Fu and

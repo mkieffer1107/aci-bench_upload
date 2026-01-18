@@ -1,0 +1,3774 @@
+[
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N034",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            2,
+            -1
+          ],
+          "reason": "Starting at line 2, the speaker tags are consistently swapped. The tag [patient] introduces the appointment, asks medical history questions, and performs a physical exam, which are responsibilities of a doctor. Conversely, the tag [doctor] describes symptoms, mentions working in the basement, and asks if the pain will go away, which are characteristically patient behaviors."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            2,
+            43
+          ],
+          "reason": "Speaker tags are swapped throughout lines 2 to 43. Lines tagged [patient] primarily contain speech typical of the doctor (e.g., greeting the patient by name 'alan', referencing appointment notes and symptoms from chart, asking questions about onset, trauma, prior pain, movement, radiation, meds, performing and describing physical exam, providing assessment of rotator cuff tendinopathy, ordering MRI, referring to PT, discussing plan and steroid option). Lines tagged [doctor] primarily contain speech typical of the patient (e.g., describing shoulder pain symptoms, denying trauma or falls, mentioning basement work, activity level, Tylenol use, limited motion, pain location and nature, sleep disturbance, no numbness, questions about recovery). Some lines contain mixed utterances from consecutive speakers, but the predominant pattern indicates swapped tags."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            2,
+            41
+          ],
+          "reason": "From line 2 through line 41 many utterances have swapped roles: turns labeled [patient] contain clinician-style speech (greeting, review of notes, exam findings, assessment and plan) while turns labeled [doctor] contain first-person symptom reports and patient responses. Examples: line 2 ([patient]) is the clinician greeting/reviewing the chart; line 5 ([doctor]) is the patient saying 'i ca n't recall...'; line 7 ([doctor]) is the patient describing doing work in the basement; line 8 ([patient]) is the clinician asking about hitting the shoulder; lines 26–34 ([patient]/[doctor]) contain the physical exam and imaging/assessment text attributed to the patient. The pattern indicates the speaker tags are swapped throughout this middle portion of the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N036",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            43,
+            46
+          ],
+          "reason": "In line 43, the speaker tag should be 'patient' as he is offering landscaping services after the doctor asked for recommendations, and in lines 44-46, the dialogue regarding backyard remodeling belongs to the patient while the doctor should be the one asking the questions."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors found. The dialogue flows logically with doctors asking questions, performing exam, diagnosing, and prescribing, while patient describes symptoms, answers questions, and discusses work. Minor phrasing awkwardness in casual conversation at lines 43-46 appears due to transcription artifacts rather than swapped tags."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swap detected. Doctor lines contain clinical questioning, exam, diagnosis, and treatment plans; patient lines contain symptom reports, answers, and brief comments. Speaker roles are consistent throughout."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N037",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            77,
+            82
+          ],
+          "reason": "The speakers are swapped in this segment. Specifically, the patient is the one asking questions to clarify what 'whole blood transfusion' is (lines 77, 82), while the doctor is the one providing the 'mm-hmm' and 'yes' confirmations (lines 79, 81, 83) regarding the medical procedure."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line tagged as [doctor] contains the patient's personal description of weightlifting habits and elbow soreness ('i lift quite a bit of weights... my elbow is extremely sore'), which is characteristic of patient speech, mixed with doctor questions."
+        },
+        {
+          "lines": [
+            77,
+            77
+          ],
+          "reason": "Line tagged as [doctor] where the speaker asks 'what is it' about the 'whole blood transfusion' procedure that the doctor just proposed and began explaining, which is patient speech seeking clarification."
+        },
+        {
+          "lines": [
+            94,
+            98
+          ],
+          "reason": "Closing lines appear to have swapped speaker tags: the '[patient]' inquires about how the '[doctor]' is doing, the '[doctor]' responds personally ('very good thank you'), and subsequent responses like '[patient] you're welcome' reverse typical doctor-patient farewell roles."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 is labeled [doctor] but after the brief greeting it contains a first-person report (“so i lift quite a bit of weights… my elbow is extremely sore”), which is the patient speaking. The turn appears to be mis-tagged/merged and should be the patient’s utterance (or split into a doctor greeting + patient response)."
+        },
+        {
+          "lines": [
+            76,
+            77
+          ],
+          "reason": "Line 76 is labeled [patient] (“not at all”) and line 77 is labeled [doctor] (“what is it”), but the sequence and content indicate line 76 is a doctor response and line 77 is a patient question. The speaker tags for these two lines appear to be swapped."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N038",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            19
+          ],
+          "reason": "Speaker tags are swapped. The speaker labeled [patient] is asking medical history questions about the lab work, drug history, smoking, and family history, while the speaker labeled [doctor] is providing personal health information and admitting to tobacco and drug use."
+        },
+        {
+          "lines": [
+            23,
+            32
+          ],
+          "reason": "Speaker tags are swapped. The speaker labeled [patient] is explaining the hepatitis C diagnosis, interpreting lab values (AST/ALT), detailing a clinical treatment plan involving RNA testing and elastography, and directing the nurse. The speaker labeled [doctor] is asking about the wife and kids and thanking the other for the orders."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            19
+          ],
+          "reason": "Speaker tags are swapped throughout lines 1-19 during the history-taking portion. Lines tagged [patient] contain doctor questions about symptoms, habits, smoking, alcohol, medical conditions, and family history. Lines tagged [doctor] contain corresponding patient responses."
+        },
+        {
+          "lines": [
+            21,
+            21
+          ],
+          "reason": "Line 21 contains continuation of the doctor's physical exam findings (heart murmur, lungs, abdomen) but is tagged [patient]."
+        },
+        {
+          "lines": [
+            23,
+            32
+          ],
+          "reason": "Speaker tags are swapped from line 23 to 32 during assessment, plan, and closing. Line 23 tagged [patient] contains doctor's exam continuation, lab review, assessment, plan explanation, and question 'how does that sound'. Subsequent [patient] tags have doctor's responses and instructions, [doctor] tags have patient's agreements and goodbye."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            19
+          ],
+          "reason": "Lines 1–19 contain clinician utterances (greeting, history-taking questions, counseling, and exam questions) that are tagged as [patient], while the corresponding patient answers are tagged as [doctor]. This indicates a swap of speaker tags across this entire initial segment."
+        },
+        {
+          "lines": [
+            21,
+            21
+          ],
+          "reason": "Line 21 continues the physical exam (medical findings and terminology) and is clearly clinician speech, but it is tagged as [patient], indicating a swapped tag for this line."
+        },
+        {
+          "lines": [
+            23,
+            26
+          ],
+          "reason": "Lines 23–26 include the clinician explaining lab results, diagnosis, and the plan (tagged as [patient]) and the patient asking about household contacts and responding (tagged as [doctor]) — the speaker tags are reversed in this block."
+        },
+        {
+          "lines": [
+            29,
+            30
+          ],
+          "reason": "Line 29 ('my nurse will be in with those orders') is clinician instruction but is tagged [patient]; line 30 ('alright thank you') reads like the patient responding but is tagged [doctor]. These indicate swapped tags for these lines."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N045",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correct. The doctor provides the clinical examination, diagnosis, and treatment plan, while the patient reports symptoms (knee pain from running) and medical history."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            3,
+            4
+          ],
+          "reason": "Line 3 is tagged [doctor] but after the initial doctor introduction and reference to notes on knee pain, it contains patient speech affirming the knee pain ('yes that's that's true'), describing running habits ('i like to run i do jogs i sign up for the 5k... marathon and i have n't been doing longer distances because'), which continues seamlessly into line 4 tagged [patient] ('when i'm running i my right knee here it just starts to ache...'). This indicates the speaker tags for the patient's response were swapped or the patient's speech was misattributed to the doctor's line."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 is labeled [doctor] but contains patient-first-person content immediately after the doctor's introduction (e.g., 'yes that's that's true... i like to run...'). This indicates the patient utterance was incorrectly tagged as the doctor on this line."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N049",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "The speaker tag for line 32 is [patient], but it should be [doctor]. The dialogue 'okay that i mean that's not too bad i think when you were first diagnosed you were up there in the' is a medical assessment and a setup for the following line about blood pressure numbers."
+        },
+        {
+          "lines": [
+            33,
+            33
+          ],
+          "reason": "The speaker tag for line 33 is [doctor], but it should be [patient]. The speaker is completing the sentence from the previous line by recalling their own historical high blood pressure reading of 'the one eighties'."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 starts with a [patient] tag but contains the doctor's response to the patient's request for help, including the phrase 'that's the biggest thing for a lot of my patient is trying to control that diet'."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is tagged as [patient] but the content from 'okay that i mean that's not too bad...' assesses the blood pressure readings, references the patient's past diagnosis and higher previous readings (continuing into line 33), which is clearly doctor's dialogue."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is tagged as [patient] but the content agrees to provide help, offers a connection to dietary support, and mentions issues common 'for a lot of my patient[s]', which is unambiguously doctor's dialogue responding to the patient's need for dietary assistance."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is labeled [patient] but reads like the doctor speaking about the patient's prior blood-pressure readings (uses 'you were first diagnosed' and continues the doctor's line of questioning). It appears the speaker tag should be [doctor]."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is labeled [patient] but contains both a patient response ('yeah some help could be helpful') and then immediately continues with what appears to be the doctor's offer/referral ('we can definitely get you connected...'). The latter portion belongs to the doctor, so the speaker tags are incorrect/merged on this line."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N051",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            40,
+            41
+          ],
+          "reason": "The speakers are swapped. In line 40, the patient is asking about a podiatrist for yearly foot exams, which is a clinical screening question typical of a doctor. In line 41, the doctor responds 'no i i i do n't', which is the patient's history, but then the tag remains [doctor] as the speaker transitions into performing the physical exam and dictating findings."
+        },
+        {
+          "lines": [
+            44,
+            45
+          ],
+          "reason": "The speakers are swapped. In line 44, the patient asks 'any questions', which is a typical concluding phrase for a doctor. In line 45, the doctor says 'yeah i mean is this do we have to do any more tests', which is a patient concern, before the speaker tag then continues to explain the medical plan (the arterial ultrasound), indicating the first sentence of line 45 belongs to the patient."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "reason": "Line 9 has the patient's estimate of the ulcer duration ('six eight weeks maybe') tagged as doctor. Line 10 has doctor's medical history questions ('do you have any pain', 'diabetic and on insulin, sugars running okay') mixed with patient's responses, tagged as patient."
+        },
+        {
+          "lines": [
+            21,
+            22
+          ],
+          "reason": "Line 21 has part of the patient's description of neuropathy symptoms ('kinda feels like it takes a little longer to') tagged as doctor, continued correctly in line 22 under patient."
+        },
+        {
+          "lines": [
+            39,
+            41
+          ],
+          "reason": "Line 39 (doctor) includes patient's denial of chest pain/shortness of breath. Line 40 (patient) has doctor's question about podiatrist. Line 41 (doctor) starts with patient's 'no' to podiatrist question before doctor's exam findings."
+        },
+        {
+          "lines": [
+            44,
+            45
+          ],
+          "reason": "Line 44 (patient) has doctor's 'any questions'. Line 45 (doctor) starts with patient's questions about tests and plan ('yeah i mean is this do we have to do any more tests') before doctor's response."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "reason": "Line 9 is labeled [doctor] but is a continuation of the patient’s answer to the question about duration ('six eight weeks maybe'). Line 10 is labeled [patient] but contains the doctor’s next questions ('okay and do you have any pain in your foot...') intermixed with patient responses. The doctor/patient turns are mis-tagged across these lines."
+        },
+        {
+          "lines": [
+            21,
+            21
+          ],
+          "reason": "Line 21 is labeled [doctor] but is actually a continuation of the patient’s statement ('kinda feels like it takes a little longer to...'). The speaker tag should be [patient]."
+        },
+        {
+          "lines": [
+            40,
+            41
+          ],
+          "reason": "Line 40 is labeled [patient] but is a doctor question ('do you have a podiatrist for your yearly foot exams?'). Line 41 begins with the patient’s answer ('no...') then continues with the doctor’s exam — the roles are swapped between these two lines."
+        },
+        {
+          "lines": [
+            44,
+            45
+          ],
+          "reason": "Line 44 is labeled [patient] but is the doctor’s prompt ('any questions?'). Line 45 is labeled [doctor] but begins with the patient’s question ('yeah i mean is this do we have to do any more tests...') before the doctor’s explanation. The patient and doctor tags are swapped across these lines."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N055",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            4,
+            4
+          ],
+          "reason": "Line 4 is tagged as [patient] but the speaker identifies as the father ('hey doc', 'karen has been having this eye twitch') responding to a prompt directed at 'dad'."
+        },
+        {
+          "lines": [
+            12,
+            12
+          ],
+          "reason": "Line 12 is tagged as [patient] but the speaker is the father answering a question directed at 'dad' regarding how often he sees Karen's twitch."
+        },
+        {
+          "lines": [
+            30,
+            30
+          ],
+          "reason": "Line 30 is tagged as [patient] but the speaker is the father responding to the doctor's question 'so dad tell me...'."
+        },
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is tagged as [patient] but the content is a parent's observation of a child ('I'd say she seems fine... she has been eating well')."
+        },
+        {
+          "lines": [
+            34,
+            34
+          ],
+          "reason": "Line 34 is tagged as [patient] but is a continuation of the father's observation."
+        },
+        {
+          "lines": [
+            36,
+            36
+          ],
+          "reason": "Line 36 is tagged as [patient] but is the father responding to whether Karen has a history of seizures."
+        },
+        {
+          "lines": [
+            38,
+            38
+          ],
+          "reason": "Line 38 is tagged as [patient] but is the father describing his observations of his daughter's face."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is tagged as [patient] but the speaker identifies as the one who made a video of Karen to show the doctor."
+        },
+        {
+          "lines": [
+            42,
+            42
+          ],
+          "reason": "Line 42 is tagged as [patient] but the speaker is the father discussing family history."
+        },
+        {
+          "lines": [
+            44,
+            44
+          ],
+          "reason": "Line 44 is tagged as [patient] but the speaker mentions 'our family', continuing the father's dialogue."
+        },
+        {
+          "lines": [
+            46,
+            46
+          ],
+          "reason": "Line 46 is tagged as [patient] but is the parent answering symptoms on behalf of the child."
+        },
+        {
+          "lines": [
+            48,
+            48
+          ],
+          "reason": "Line 48 is tagged as [patient] but is the parent answering regarding coughing/headaches."
+        },
+        {
+          "lines": [
+            50,
+            50
+          ],
+          "reason": "Line 50 is tagged as [patient] but is the parent answering about the child's sleep."
+        },
+        {
+          "lines": [
+            60,
+            60
+          ],
+          "reason": "Line 60 is tagged as [patient] but the speaker is the father asking for confirmation on the child's (referred to as 'he' in a likely typo, or meaning the patient) condition."
+        },
+        {
+          "lines": [
+            62,
+            62
+          ],
+          "reason": "Line 62 is tagged as [patient] but the speaker is asking about treatment options for the child."
+        },
+        {
+          "lines": [
+            64,
+            64
+          ],
+          "reason": "Line 64 is tagged as [patient] but is the parent acknowledging the plan."
+        },
+        {
+          "lines": [
+            66,
+            66
+          ],
+          "reason": "Line 66 is tagged as [patient] but is the parent saying goodbye/addressing the doctor."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors detected. The [doctor] lines contain appropriate medical history taking, examination instructions, dictation, and explanations consistent with a physician. The [patient] lines include responses from the child patient (short, age-appropriate anecdotes about soccer, friends, food) and her father (third-person descriptions of symptoms, history, video offer, questions), which is standard for pediatric visits where a parent accompanies and speaks for the child."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swap detected. Lines labeled [doctor] contain clinician utterances and instructions, and lines labeled [patient] contain responses from the child or her father (caregiver). There are no segments where the doctor and patient roles appear reversed."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N056",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. The speaker labeled as [patient] is the one greeting the other, taking a history, performing a physical exam, and prescribing treatment, which are roles of the doctor. Conversely, the speaker labeled as [doctor] is describing symptoms like cough, mucus, and fever, and answering questions about their history and family, which are roles of the patient."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. Lines tagged as [patient] contain speech typical of a doctor (e.g., greeting the patient, asking about symptoms and history, performing physical exam, providing diagnosis and treatment plan), while lines tagged as [doctor] contain speech typical of a patient (e.g., describing personal symptoms, farm work, family history, asking questions about treatment). This pattern is consistent from line 1 to line 40."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "All speaker tags appear reversed across the transcript: lines labeled [patient] contain clinician language (opening, history-taking, physical exam and assessment — e.g. line 1 is a clinician greeting and line 31 gives exam findings and diagnosis), while lines labeled [doctor] contain patient responses, symptoms, and questions (e.g. line 2 and line 34). Therefore the entire transcript has patient/doctor tags swapped."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N057",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has speaker tags swapped. The 'patient' tag is consistently used for the individual asking medical history questions, performing a physical exam (testing range of motion), ordering x-rays, diagnosing 'hallux rigidus', and prescribing medication/work restrictions. The 'doctor' tag is used for the individual reporting symptoms (big toe pain), describing their hobbies (cycling, fishing), and receiving the diagnosis and treatment plan."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. Lines tagged [patient] contain dialogue typical of a doctor (e.g., greeting the patient by name, asking about symptoms, performing physical exam, interpreting x-ray, prescribing treatment, giving instructions), while lines tagged [doctor] contain responses typical of a patient (e.g., describing toe pain and history, reacting to exam, asking about surgery, requesting time off for fishing)."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "All speaker tags appear consistently inverted throughout the transcript: clinician utterances (greetings, exam instructions, assessment, treatment plan, return visit instructions — e.g., lines 1, 23, 39, 45, 49, 71, 73) are labeled [patient], while the patient's history and symptom reports (e.g., 'my big toe hurts' at line 2, pain descriptions at lines 4, 26, 30, 32) are labeled [doctor]. This indicates the patient and doctor tags are swapped for the entire transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N059",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            2,
+            -1
+          ],
+          "reason": "The speaker tags are swapped from line 2 onwards. In line 3, the speaker tagged as 'doctor' thanks 'doctor cooper' for seeing them and describes asthma symptoms. In lines 4-6, the speaker tagged as 'patient' asks how they can help and then describes difficulty breathing. This pattern continues with the 'patient' tag performing the physical exam (lines 38-54) and prescribing medication (line 59), while the 'doctor' tag reports symptoms and medical history."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. Content tagged as [doctor] primarily consists of patient greetings, symptom descriptions (e.g., asthma issues, difficulty breathing during sports, mood concerns), personal history, and affirmative responses (e.g., 'mm-hmm', 'yeah'), while content tagged as [patient] consists of doctor's professional responses, questions about symptoms and history, physical exam actions (e.g., listening to heart and lungs, checking eyes and ears), and treatment recommendations (e.g., Singulair, therapist). This consistent reversal indicates a global speaker tag swap."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "Speaker tags appear to be globally reversed: lines tagged [doctor] contain the patient’s history/symptoms (e.g. line 3: “...thanks doctor Cooper...i'm...sad...”; line 5: “i've been dealing with my asthma...”; line 13: “i start...coughing...wheezing...”), while lines tagged [patient] contain the clinician’s questions/exam/actions (e.g. line 8: “okay let's talk about the asthma first so what inhaler are you using now”; line 38: “i'm gon na take a listen to your heart and lungs”; line 56: “in terms of the asthma i think we could try a daily medication…”). This pattern (patient content labeled [doctor], clinician content labeled [patient]) holds throughout the transcript, indicating the speaker tags are swapped for the entire conversation."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "D2N065",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The speaker tags are correctly assigned throughout the transcript. The doctor (lines 1, 3, 5, 7, 9, etc.) consistently provides clinical assessments, performs physical examinations, and gives medical advice, while the patient (lines 2, 4, 6, 8, etc.) reports symptoms such as slipping on ice and ankle pain."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors detected. The transcript is correctly tagged throughout. The doctor initiates the conversation, asks appropriate medical history questions, describes the physical exam and findings (including medical terminology), provides assessment and plan, while the patient responds with personal details about the injury, symptoms, history, and questions. Even the patient's single-word response 'malleolus' in line 22 is plausible given their soccer background and common knowledge of ankle anatomy in sports contexts."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            22,
+            22
+          ],
+          "reason": "Line 22 ('malleolus') appears to be a continuance of the doctor's description ('lateral malleolus') split by the transcription. Lines 21–23 form one continuous doctor assessment; line 22 is mislabeled as [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI001",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            43,
+            46
+          ],
+          "reason": "Lines 43-46 contain swapped tags. In line 43, the doctor discusses wanting a landscape designer but then starts answering as if they were the gardener ('yeah we can do stuff like that'). In lines 44 and 45, the patient is tagged as the doctor and the doctor as the patient. In line 46, the patient discusses the logistics of 'rehab remodel' tasks which matches the landscaper's professional experience, but the tags remain inconsistent through this segment."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript has correctly assigned speaker tags with no swaps detected. The doctor initiates the conversation, asks about symptoms, history, work, and exam findings, provides diagnosis and treatment plan, while the patient describes symptoms, answers questions, and discusses their landscaping work appropriately."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No doctor/patient speaker-tag swaps detected; speaker roles are consistent throughout. (Minor transcription artifact: line 17 contains an appended 'no' that reads like a patient response, but the surrounding dialogue does not indicate a speaker-tag swap.)"
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI032",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags swapped. The speaker labeled [patient] is performing the intake, physical exam, and providing a diagnosis (Farmer's Lung), while the speaker labeled [doctor] is describing symptoms of coughing and mucus, environmental exposure to hay, and asking if the treatment will prevent them from getting sick."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. Every line tagged as [patient] contains speech that logically belongs to the doctor (e.g., greeting, asking about symptoms, performing exam, giving diagnosis and plan), and every line tagged as [doctor] contains speech that belongs to the patient (e.g., describing personal symptoms, history, and questions about treatment). Some patient responses are split across lines (e.g., lines 5-6), but the tags remain incorrectly swapped."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "All speaker tags appear to be reversed throughout the transcript: lines labeled [patient] contain clinician speech (greetings, history-taking questions, exam findings, assessment/plan) while lines labeled [doctor] contain the patient’s responses/symptoms. Examples: line 1 is a clinician greeting/history question but labeled [patient]; line 31 is the physical exam/assessment but labeled [patient]; line 2 and many even-numbered lines are the patient’s symptom reports but labeled [doctor]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI035",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags [doctor] and [patient] swapped. From the beginning, the line tagged [doctor] says 'okay' followed by a line tagged [patient] saying 'good morning', but then the [doctor] line thanks 'doctor cooper', indicating the labels are reversed. Throughout the session, the [doctor] tags describe patient symptoms like asthma, mood issues, and physical exams, while the [patient] tags perform clinical tasks like listening to heart/lungs and prescribing Singulair."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            3,
+            68
+          ],
+          "reason": "The speaker tags are swapped starting from line 3 through the end of the transcript. Lines tagged as [doctor] contain patient dialogue (e.g., describing personal symptoms, asthma issues, mood concerns, responses like 'yeah' or 'mm-hmm'), while lines tagged as [patient] contain doctor dialogue (e.g., asking medical history questions, performing the physical exam, providing treatment recommendations). Although some short lines like mm-hmm are neutral and a few lines (e.g., 41, 59) have matching tags, the overall pattern matches swapped tags as seen in the examples."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "Speaker tags appear to be consistently swapped throughout the transcript: lines labeled [doctor] predominantly contain first-person symptom reports and patient history (e.g., asthma, mood symptoms, 'I have an albuterol inhaler'), while lines labeled [patient] contain clinician questions, exam actions, and recommendations (e.g., 'what inhaler are you using now', 'i'm gonna take a listen to your heart and lungs', treatment plan). This indicates the doctor/patient tags are reversed for the entire transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI040",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            19
+          ],
+          "reason": "The tags are inverted: the person labeled [patient] is asking medical history questions (IV drugs, alcohol, smoking, family history) and mentioning 'my patients', while the person labeled [doctor] is providing symptoms and personal history."
+        },
+        {
+          "lines": [
+            20,
+            20
+          ],
+          "reason": "The speaker tag is currently [doctor], but this speaker is performing the physical exam, which aligns with the medical professional role. In the context of the previous inverted section (lines 1-19), this should be the same speaker who was previously labeled [patient]."
+        },
+        {
+          "lines": [
+            21,
+            21
+          ],
+          "reason": "The tag [patient] is used for a speaker reciting clinical physical exam findings (systolic ejection murmur, clear lungs, no hepatosplenomegaly), which is clearly the role of the doctor."
+        },
+        {
+          "lines": [
+            23,
+            23
+          ],
+          "reason": "The tag [patient] is used for a speaker interpreting lab results (AST, ALT), explaining the pathology of Hepatitis C, and ordering further diagnostics (ultrasound elastography), which is the role of the doctor."
+        },
+        {
+          "lines": [
+            24,
+            24
+          ],
+          "reason": "The tag [doctor] is used for a speaker expressing concern about their wife and kids, which is the role of the patient."
+        },
+        {
+          "lines": [
+            25,
+            25
+          ],
+          "reason": "The tag [patient] is used for a speaker proposing a screening plan and follow-up appointments, which is the role of the doctor."
+        },
+        {
+          "lines": [
+            26,
+            32
+          ],
+          "reason": "The tags remain swapped through the end of the transcript, with the [patient] sending a nurse in with orders and the [doctor] thanking the other party."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            19
+          ],
+          "reason": "Speaker tags are swapped throughout this range. Lines tagged [patient] contain dialogue typical of the doctor (reviewing notes, asking about symptoms, history of drug/alcohol/smoking use, other conditions, and family history), while lines tagged [doctor] contain dialogue typical of the patient (describing anxiety, personal history, habits, and family conditions)."
+        },
+        {
+          "lines": [
+            24,
+            32
+          ],
+          "reason": "Speaker tags are swapped throughout this range. Lines tagged [patient] contain dialogue typical of the doctor (addressing family concerns, suggesting screening and appointments, providing orders), while lines tagged [doctor] contain dialogue typical of the patient (expressing worry about family, agreeing to plan, farewell)."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            19
+          ],
+          "reason": "Lines 1–19 show consistent speaker-tag reversal: utterances that are clearly clinician questions/advice (e.g., line 1 '...you had positive lab work for hep c so how're you doing today', line 5 '...do you have a history of iv drug use...') are tagged [patient], while the patient responses (e.g., line 2 'i'm doing okay but i'm a little bit anxious...', line 6 'i mean i used to party a lot...') are tagged [doctor]. This indicates the patient/doctor tags are swapped across this block."
+        },
+        {
+          "lines": [
+            21,
+            32
+          ],
+          "reason": "Lines 21–32 again contain clinician-centered content (physical exam findings and assessment/plan in lines 21–23 and follow-up instructions in lines 25 and 29) that is mostly tagged [patient], while brief patient replies/questions (e.g., line 24 'i hmmm so i do have a wife and kids so should i be worried about them', line 26 'okay that sounds good') are tagged [doctor]. These lines therefore appear to have swapped speaker tags as well. (Line 20 is the transition point and appears labeled correctly.)"
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI048",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is labeled [patient] but the content '...that i mean that's not too bad i think when you were first diagnosed you were up there in the' is a medical assessment and lead-in to the doctor's next phrase regarding previous blood pressure levels."
+        },
+        {
+          "lines": [
+            33,
+            33
+          ],
+          "reason": "Line 33 is labeled [doctor] but the content 'the one eighties which was really high' is the patient finishing the clinical observation started in line 32, which is characteristic of the speaker-role swap occurring in this specific segment."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is labeled [patient] but starts with a brief patient response ('yeah some help could be helpful') and then transitions into a long explanation of clinical plans ('...we can definitely get you connected with someone... that's the biggest thing for a lot of my patient'), which clearly belongs to the doctor tag."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is tagged [patient] but after reporting the bottom blood pressure numbers, it contains doctor's reassuring response ('okay that i mean that's not too bad') and reference to the patient's past diagnosis levels, indicating swapped speaker tags."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is tagged [patient] but after the patient briefly agrees to needing help, it contains doctor's speech offering a referral ('okay yeah we can definitely get you connected with someone'), referencing issues common 'for a lot of my patient,' indicating swapped speaker tags."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swap detected. The doctor and patient utterances are consistent throughout the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI050",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            2,
+            -1
+          ],
+          "reason": "Starting at line 2, the speaker tags are inverted. The person tagged as 'patient' is performing the clinical tasks—opening the appointment, conducting a physical exam, reviewing vitals, interpreting X-rays, and prescribing physical therapy. Conversely, the person tagged as 'doctor' is reporting history of injury, describing pain symptoms (radiating, affecting sleep), and asking about their prognosis."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            2,
+            2
+          ],
+          "reason": "Doctor greeting the patient by name, referencing appointment notes and shoulder pain complaint, tagged as [patient]."
+        },
+        {
+          "lines": [
+            5,
+            20
+          ],
+          "reason": "Consistent swap during history taking: patient's responses about lack of trauma, basement work, prior shoulder pain, arm movement limitations, pain location, timing, sleep impact, and Tylenol use tagged as [doctor]; doctor's questions about mechanism of injury, prior trauma, previous pain, range of motion, radiation, pain characteristics, and medication use tagged as [patient]."
+        },
+        {
+          "lines": [
+            24,
+            34
+          ],
+          "reason": "Consistent swap: doctor's question about numbness/tingling tagged [patient]; patient's denial tagged [doctor]; doctor's physical exam description (range of motion, tenderness sites, neurovascular exam, x-ray results, initial assessment) tagged [patient]; patient's responses during exam ('okay', 'yeah') tagged [doctor]."
+        },
+        {
+          "lines": [
+            36,
+            42
+          ],
+          "reason": "Consistent swap during assessment and plan: doctor's MRI order, PT referral, medication advice, and reassurance tagged [patient]; patient's prior PT denial, recovery concern, and thanks tagged [doctor]; doctor's closing 'bye' tagged [patient]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            2,
+            2
+          ],
+          "reason": "Line 2 is tagged [patient] but the content is a clinician greeting and chart review (should be [doctor])."
+        },
+        {
+          "lines": [
+            5,
+            21
+          ],
+          "reason": "In this block many tags are swapped: lines tagged [doctor] contain the patient's history/responses (e.g., \"I can't recall...\", \"I have been doing a lot of work...\", \"I'm having a lot of pain...\"), while lines tagged [patient] contain clinician questions/prompts (e.g., \"Do you remember hitting it?\", \"Have you had pain in that shoulder before?\", \"Are you able to move the arm?\")."
+        },
+        {
+          "lines": [
+            24,
+            34
+          ],
+          "reason": "Another region with swapped tags: lines labeled [patient] present clinician exam findings and explanations (e.g., review of x-ray, assessment/plan lead-in), while lines labeled [doctor] are patient short responses/interjections. The exam and imaging commentary belong to the clinician but are labeled [patient]."
+        },
+        {
+          "lines": [
+            36,
+            41
+          ],
+          "reason": "Plan and follow-up discussion is mislabeled: lines tagged [patient] contain the clinician's treatment plan/referral and counseling, while lines tagged [doctor] are the patient's brief replies/questions (e.g., \"I haven't\" / \"so like I said I'm really active...\")."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI053",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            4,
+            4
+          ],
+          "reason": "Line 4 is labeled as [patient] but the speaker addresses the doctor ('hey doc') and refers to 'karen' (the patient) in the third person, identifying as the parent."
+        },
+        {
+          "lines": [
+            12,
+            12
+          ],
+          "reason": "Line 12 is labeled as [patient] but the speaker is answering a question directed at 'dad' and refers to the patient 'karen' in the third person."
+        },
+        {
+          "lines": [
+            30,
+            30
+          ],
+          "reason": "Line 30 is labeled as [patient] but the speaker is the father answering a question about the patient's behavior using 'she'."
+        },
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is labeled as [patient] but the speaker is the parent answering for the child using 'she'."
+        },
+        {
+          "lines": [
+            34,
+            34
+          ],
+          "reason": "Line 34 is labeled as [patient] but is a continuation of the parent's observation regarding the child's symptoms."
+        },
+        {
+          "lines": [
+            38,
+            40
+          ],
+          "reason": "Lines 38 and 40 are labeled [patient] but are spoken by the father describing Karen's movements and mentioning a video he made."
+        },
+        {
+          "lines": [
+            42,
+            42
+          ],
+          "reason": "Line 42 is labeled [patient] but the speaker responds to a question about family history and refers to the 'tourette thing' in the third person."
+        },
+        {
+          "lines": [
+            44,
+            44
+          ],
+          "reason": "Line 44 is labeled [patient] but the speaker refers to 'our family' and 'that' regarding the medical history."
+        },
+        {
+          "lines": [
+            46,
+            46
+          ],
+          "reason": "Line 46 is a parent answering for the child."
+        },
+        {
+          "lines": [
+            48,
+            48
+          ],
+          "reason": "Line 48 is labeled [patient] but appears to be the father answering 'ma'am' to the doctor's question."
+        },
+        {
+          "lines": [
+            50,
+            50
+          ],
+          "reason": "Line 50 is the parent answering about the patient's sleep."
+        },
+        {
+          "lines": [
+            60,
+            60
+          ],
+          "reason": "Line 60 is labeled [patient] but is the father asking for clarification on the diagnosis using 'he' (likely a typo for 'she' or referring to the child)."
+        },
+        {
+          "lines": [
+            62,
+            62
+          ],
+          "reason": "Line 62 is labeled [patient] but is the father asking about treatment options."
+        },
+        {
+          "lines": [
+            64,
+            64
+          ],
+          "reason": "Line 64 is the father agreeing with the plan."
+        },
+        {
+          "lines": [
+            66,
+            66
+          ],
+          "reason": "Line 66 is labeled [patient] but is a polite closing remark from the parent to the doctor."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No swapped speaker tags detected. The [doctor] lines contain appropriate medical questioning, examination descriptions, and assessment content. The [patient] lines contain responses from the child patient (Karen) and her father (accompanying adult), which is consistent with a pediatric visit where a parent provides history and the child responds simply. No instances where [patient] content sounds like doctor speech (e.g., asking diagnostic questions) or vice versa."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swap detected. Doctor utterances are consistent with medical questions/explanations and patient-tagged lines correspond to the child or accompanying parent; I found no lines where a doctor and patient lines appear to be swapped."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI054",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The speaker tags in this transcript are correct. The doctor provides medical history, performs the physical exam, and provides the assessment and plan, while the patient describes symptoms, lifestyle, and history appropriately."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The speaker tags are correctly assigned throughout the entire transcript. The [doctor] lines include appropriate medical history recitation, symptom inquiries, physical exam descriptions, assessments, and treatment plans. The [patient] lines consist of personal responses, denial of symptoms, discussion of hobbies and diet, and agreements with the plan, with no instances of swapped dialogue."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 ('just alright how's it') reads like a brief patient response/continuation to the doctor's greeting (lines 1–2), not a clinician question or prompt. The speaker tag for line 3 appears to be swapped (should be [patient])."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI073",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "In line 1, the doctor's tag contains the patient's personal history and symptoms ('i lift quite a bit of weights... my elbow is extremely sore') mixed with a doctor's question ('which elbow is it'). This indicates the speaker tags are partially incorrect or a portion of the patient's self-introduction was misattributed to the doctor."
+        },
+        {
+          "lines": [
+            75,
+            86
+          ],
+          "reason": "The speaker tags are swapped in this range. At line 77, the doctor asks 'what is it', and the patient at line 78 explains the medical procedure (blood injection into tendon). This continues until line 86, where the patient says 'maybe i have heard about that', which should be attributed to the patient after the doctor (at line 83) confirmed the description."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 is tagged [doctor] but contains primarily the patient's self-description of weightlifting habits and complaint of sore elbow from heavy lifting ('so i lift quite a bit of weights ... i'm not like normal people i lift heavy weights and my elbow is extremely sore'), which appears to be patient speech swapped into a doctor-tagged line, despite bookending doctor speech."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 is labeled [doctor] but contains a long first-person account of lifting weights and elbow pain (patient speech). The line begins with the clinician greeting but then includes the patient's history and symptom description, indicating a mis-tag (should be [patient] for the history portion / the line should be split)."
+        },
+        {
+          "lines": [
+            77,
+            77
+          ],
+          "reason": "Line 77 is labeled [doctor] but reads like the patient asking for clarification ('what is it') following their prior questions. Context (lines 74–76 and 78–83) shows the patient is asking about the procedure, so this line is mis-tagged as [doctor] and should be [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI082",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correctly labeled. The doctor (Sanchez) introduces themselves, asks diagnostic questions, performs a physical exam, reviews vitals/x-rays, and provides a treatment plan. The patient (Abigail) responds with symptoms regarding knee pain while running and asks follow-up questions about exercise limitations."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            3,
+            4
+          ],
+          "reason": "Lines 3 and 4 contain continuous patient speech describing confirmation of knee pain, running habits, and symptoms (starting after 'knee pain' in line 3 with 'yes that's that's true...' through line 4), but line 3 is tagged as [doctor] for the patient portion, indicating a speaker tag swap error."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 is tagged as [doctor] but contains the patient's response starting at 'yes that's that's true...'. The patient reply is misattributed to the doctor (the line should be split into doctor intro and patient response)."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI090",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correct. The [doctor] consistently asks medical questions, performs the physical exam, reviews vitals/X-rays, and provides the diagnosis and treatment plan, while the [patient] describes the injury, pain levels, and medical history."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            22,
+            22
+          ],
+          "reason": "Line 22 is tagged as [patient] but contains the medical term 'malleolus', which completes the doctor's phrase 'lateral malleolus' from line 21 and aligns with the doctor's ongoing exam description in line 23 that repeats 'malleolus' and continues with professional medical assessment language. This appears to be a swapped speaker tag; it should be [doctor]. No other swaps detected."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            22,
+            22
+          ],
+          "reason": "Line 22 is labeled [patient] but contains a single medical term ('malleolus') that clearly continues the doctor's prior description of the ankle exam (line 21). This appears to be a continuation of the doctor's narration and should be tagged [doctor]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI093",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            40,
+            41
+          ],
+          "reason": "In line 40, the patient is asking about having a podiatrist for yearly exams, which is a clinician's query. In line 41, the doctor's tag begins by answering 'no' to that question before transitioning into the physical exam findings, indicating the tags for the initial question/answer exchange are swapped."
+        },
+        {
+          "lines": [
+            44,
+            45
+          ],
+          "reason": "In line 44, the patient asks 'any questions', which is a typical physician closing statement. In line 45, the doctor responds with 'yeah i mean is this do we have to do any more tests', which is a patient's follow-up question regarding the proposed treatment plan."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "reason": "Line 9 is tagged [doctor] but contains the patient estimating the duration of the ulcer ('six eight weeks maybe'). Line 10 is tagged [patient] but primarily contains the doctor's questions about foot pain, diabetes, insulin, and blood sugars, with embedded patient responses ('no no no pain', 'yeah')."
+        },
+        {
+          "lines": [
+            39,
+            41
+          ],
+          "reason": "Speaker tags appear swapped in this range. Line 39 tagged [doctor] includes patient's denial of chest pain/SOB. Line 40 tagged [patient] is doctor's question about podiatrist. Line 41 tagged [doctor] starts with patient's denial of having a podiatrist ('no i i i don't') followed by doctor's exam findings."
+        },
+        {
+          "lines": [
+            44,
+            45
+          ],
+          "reason": "Line 44 tagged [patient] contains doctor's 'any questions?'. Line 45 tagged [doctor] starts with patient's questions about tests/ultrasound ('yeah i mean is this do we have to do any more tests') followed by doctor's explanation of plan."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            9,
+            11
+          ],
+          "reason": "Lines 9–11 contain mixed/misassigned turns. Line 9 is tagged [doctor] but reads like the patient’s completion of their answer (“six eight weeks maybe”). Line 10 is tagged [patient] but includes the doctor’s question (“okay and do you have any pain in your foot”) followed by the patient’s response and another doctor prompt, indicating multiple speaker turns were merged and tags are incorrect in this block. Line 11 (“okay”) is also likely mis-tagged within this exchange."
+        },
+        {
+          "lines": [
+            39,
+            40
+          ],
+          "reason": "Lines 39–40 show swapped speakers. Line 39 is tagged [doctor] but includes both the doctor’s question and the patient’s reply (“no no ... i would n't attribute anything”), and line 40 is tagged [patient] yet contains a doctor question (“do you have a podiatrist for your yearly foot exams”). These tags appear reversed/merged for this exchange."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "train",
+    "encounter_id": "ACI100",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags [patient] and [doctor] swapped. Line 1 shows the 'patient' greeting the 'doctor' by name (Joseph) and asking how they are doing. Throughout the transcript, the 'patient' is performing physical exams, ordering x-rays, diagnosing 'hallux rigidus', and prescribing medication (meloxicam) and orthotics, while the 'doctor' is describing foot pain, symptoms, and discussing their hobbies such as bike riding and fishing."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            74
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. Lines tagged as [patient] contain doctor speech, such as greetings, medical history questions, physical exam descriptions, diagnosis (e.g., hallux rigidus, orthotics, meloxicam), and instructions. Lines tagged as [doctor] contain patient speech, such as symptom descriptions (big toe pain, throbbing, biking habits, work concerns, fishing), reactions (ouch, oh), and personal responses."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "All speaker tags appear to be swapped: lines labeled [patient] contain clinician speech (greeting, exam instructions, diagnosis, treatment plan), while lines labeled [doctor] contain the patient's symptom descriptions and requests (toe pain history, pain responses, activity/fishing request). This consistent reversal indicates the entire transcript's patient/doctor tags are inverted."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "D2N078",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            40,
+            41
+          ],
+          "reason": "Lines 40 and 41 have swapped speaker tags. Line 40 has the patient asking 'do you have any other questions' and line 41 has the doctor thanking the patient for seeing them, which is the reverse of a standard exit dialogue."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors found. The transcript correctly attributes professional, questioning, and explanatory speech (e.g., greetings, history taking, exam descriptions, assessment, and plan) to [doctor] tags, while brief symptom descriptions, yes/no answers, and patient-initiated questions are appropriately under [patient] tags. Line 40, though awkwardly phrased, does not exhibit a clear swap as it can be interpreted as the patient's closing remarks."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 includes two utterances: a doctor prompt ('alright do you have any other questions') followed by the patient reply ('no that's it i appreciate you seeing me'), but the entire line is labeled [patient]. The doctor's utterance is therefore mislabeled as the patient."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "D2N082",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags swapped. Throughout the dialogue, the 'patient' tag is used for the individual performing the physical exam, diagnosing blood work (IgA deficiency), and offering medical advice, while the 'doctor' tag is used for the individual reporting symptoms, medical history (type 2 diabetes), and anxiety about lab results."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            4,
+            46
+          ],
+          "reason": "Speaker tags are swapped throughout this range. Content tagged as [patient] consists of doctor speech, including greeting the patient by name, asking about medical history (e.g., infections, family history, travel), narrating the physical exam findings (e.g., heart, lungs, abdomen), and providing initial assessment. Content tagged as [doctor] consists of patient speech, including responses about anxiety over lab results, personal symptoms, diabetes diagnosis, and questions."
+        },
+        {
+          "lines": [
+            48,
+            53
+          ],
+          "reason": "Speaker tags are swapped in this range continuing the assessment and closing. Line 48 tagged [patient] has doctor instructions on blood products and informing providers of IgA deficiency. Lines 49, 51, 53 tagged [doctor] have patient responses and closing remarks. Line 50 tagged [patient] has doctor explanation of risks; line 52 tagged [patient] has doctor 'you're welcome'."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "Speaker roles appear reversed throughout the transcript: lines labeled [patient] contain clinician speech (greeting, questions, exam, assessment) while lines labeled [doctor] contain patient responses and personal history. Examples: line 4 ([patient]) = 'hi kyle how are you today' is a clinician greeting; line 5 ([doctor]) = 'i'm doing well i'm just anxious...' is the patient statement. Lines 42–46 show the clinician performing the physical and giving the plan under [patient] tags while the patient’s question ('is there anything i need to do...') is labeled [doctor]. This pattern persists for the entire transcript, indicating a global swap of speaker tags."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "D2N085",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 contains the doctor's questions (e.g., 'does the pain move', 'is the pain constant') and the patient's immediate responses (e.g., 'it feels like it goes to my lower abdomen', 'it comes and goes') within a single block tagged as [doctor]. This line represents a fusion of both speakers' roles under one incorrect tag."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 is tagged as [doctor] but contains a mix of the patient's medical history and symptoms (e.g., 'I have taken some tylenol', 'I feel nauseated', 'my father had them') and the doctor's concluding remarks regarding the physical examination."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line tagged [doctor] but starts with patient reporting prior visit to primary care doctor, CT scan results, referral to urologist, and includes patient's answers to questions about pain radiation ('yeah it feels like it goes to my lower abdomen into my groin'), pain pattern ('it comes and goes... pretty bad'), suggesting swapped tags."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line tagged [doctor] but contains patient's responses including no frank blood but dark urine ('i don't think there is any... looks a little dark'), pain medication ('i have taken some tylenol but hasn't really helped'), nausea without vomiting ('i feel nauseated but i'm not vomiting'), family history ('yes my father had them'), and prior kidney stones ('yeah so i've had them... taking a lot longer'), indicating swapped speaker tags."
+        },
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line tagged [doctor] correctly describes exam findings, CT review, and treatment plan, but ends with patient's agreeing response ('okay okay sounds good thank you'), which appears to be mis-tagged patient speech."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 is mixed: it begins with the patient's report ('i saw my doctor and they ordered a cat scan and said i had a kidney stone and sent me to see a urologist') but is tagged [doctor]. The same line then continues with the clinician's questions — the patient's utterance is incorrectly labeled."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 contains alternating doctor questions and patient responses (e.g., 'okay do you notice any blood' followed by 'i don't think there is any...'; 'what have you taken for the pain' followed by 'i have taken some tylenol'; 'do you have any nausea' followed by 'i feel nauseated'; 'is anyone in your family had kidney stones' followed by 'yes my father...'). Multiple patient responses are incorrectly labeled [doctor]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "D2N087",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            68,
+            68
+          ],
+          "reason": "The patient tag is used for line 68, but the content clearly belongs to the doctor as it discusses clinical plans, continuing medication for three weeks, and ordering laboratory tests (Lyme titer, Western Blot)."
+        },
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "The patient tag is used for line 72, but the content is the doctor explaining medical risks such as Lyme disease affecting the heart and the rationale for ordering blood tests and potential intravenous antibiotics."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            68,
+            68
+          ],
+          "reason": "Line 68 continues the doctor's explanation of the treatment plan, specifying the duration of doxycycline, ordering Lyme titer and Western blot tests, and discussing avoiding IV antibiotics. This medical decision-making and terminology indicates it should be tagged as [doctor], not [patient]."
+        },
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "Line 72 continues the doctor's explanation of Lyme disease management, including ordering blood tests and discussing risks like IV antibiotics for organ involvement. The use of 'I'm gonna order' and clinical advice shows swapped tags; it should be [doctor]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            68,
+            68
+          ],
+          "reason": "Line 68 contains the clinician's plan and instructions (\"we're gonna continue that for about three weeks... send a lyme titer as well as a western blot... avoid intravenous antibiotics\"), not a patient response. The content is explanatory/prescriptive and follows the doctor's treatment recommendation in line 67, so this line is mislabeled as [patient] but should be [doctor]."
+        },
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "Line 72 continues the clinician explanation (ordering blood tests and discussing possible need for IV antibiotics and organ involvement), which answers the patient’s question in line 70. This line is labeled [patient] but clearly is the doctor providing further information and should be labeled [doctor]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "ACI005",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 contains the doctor's speech tagged as the patient. The speaker mentions their doctor ordering a cat scan (patient perspective) but then immediately shifts to clinical questioning ('does the pain move', 'is the pain constant', 'do you notice any pain when you urinate') and provides responses to those questions within the same turn, indicating a script merge or tag error where the doctor's clarifying questions and the patient's answers are lumped into one 'doctor' tag."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 contains a dialogue exchange where the speaker tagged as 'doctor' provides both clinical questions ('do you notice any blood', 'what have you taken for the pain', 'do you have any nausea') and the patient's answers to those questions ('I don't think there is any', 'I have taken some tylenol', 'I feel nauseated'). The speaker then concludes with a professional plan to perform a physical examination, confirming this block contains both roles but is incorrectly tagged solely as 'doctor'."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line tagged [doctor] but begins with clear patient speech recounting their visit to a primary care doctor, CT scan results diagnosing a kidney stone, and referral to a urologist, followed by mixed doctor questions and patient answers indicating swapped attribution."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line tagged [doctor] but contains multiple embedded patient responses, such as no frank blood but dark urine, Tylenol not helping pain, feeling nauseated without vomiting, father having kidney stones, and prior history of passing kidney stones, suggesting speaker tag swap or misattribution."
+        },
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line tagged [doctor] but ends with patient's affirmative responses and thanks ('okay okay sounds good thank you') after the doctor's detailed exam findings, assessment, and treatment plan."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            3,
+            3
+          ],
+          "reason": "Line 3 begins with patient history (‘i saw my doctor and they ordered a cat scan and said i had a kidney stone and sent me to see a urologist’) but is tagged [doctor]. The same line then contains clinician questions — the speaker turns are merged and the initial patient utterance is mis-tagged."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 contains multiple alternating turns (clinician questions and patient answers: e.g., ‘okay do you notice any blood’ followed by ‘i don't think there is any…’, ‘what have you taken for the pain’ followed by ‘i have taken some tylenol…’, etc.) but the entire line is tagged [doctor]. Several patient responses are incorrectly labeled as the doctor."
+        },
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line 7 is the clinician’s physical exam, assessment and plan (correctly doctor content) but it also ends with a patient acknowledgement (‘okay okay sounds good thank you’) included under the [doctor] tag. That final patient utterance is mis-tagged."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "ACI026",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            40,
+            41
+          ],
+          "reason": "The speaker tags are swapped in the final exchange. Line 40 is labeled as [patient] but they are asking 'do you have any other questions' and closing the visit, which is a doctor action. Line 41 is labeled [doctor] but the speaker refers to 'my nurse' in the third person while receiving the information, whereas the phrasing 'my nurse will be in' and 'we will see you next time' belongs to the doctor."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is tagged as [patient], but the content begins with 'alright do you have any other questions', which is characteristic of a doctor prompting the patient for additional questions at the end of the visit (consistent with the doctor's earlier question in line 35), followed by a patient response 'no that's it i appreciate you seeing me'. This indicates a speaker tag error where doctor dialogue is incorrectly attributed to the patient."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swap detected. Doctor lines contain history-taking, exam, assessment/plan and instructions; patient lines contain symptom reports and brief responses. The turns are consistent throughout the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "ACI041",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags swapped. Line 4 shows the 'patient' hi-greets 'Kyle' and asks how they are, while Line 5 shows the 'doctor' reporting symptoms and lab work anxiety. Throughout the dialogue, the 'patient' performs medical examinations, interprets lab results (IgA deficiency), and provides medical advice, while the 'doctor' answers personal health history questions and asks about risks of blood products."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            4,
+            53
+          ],
+          "reason": "Speaker tags are swapped between [patient] and [doctor] from line 4 through line 53. Lines tagged as [patient] contain doctor dialogue (e.g., greeting the patient 'hi kyle', medical explanations, performing exam, assessment), while lines tagged as [doctor] contain patient responses (e.g., expressing anxiety about labs, personal medical history, questions about condition). Lines 1-3 appear correctly tagged."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            4,
+            53
+          ],
+          "reason": "From line 4 through the end (line 53) the speaker roles appear reversed: lines tagged [patient] contain clinician utterances (e.g., line 4 'hi kyle how are you today' and line 10 explaining IgA), and lines tagged [doctor] contain patient responses/concerns (e.g., line 5 expressing anxiety about abnormal labs and line 21 describing frequent colds). Earlier lines 1–3 appear correctly tagged, but beginning at line 4 the doctor/patient tags are swapped."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "ACI051",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            68,
+            68
+          ],
+          "reason": "Line 68 is tagged as [patient] but the speaker is continuing the medical treatment plan, discussing antibiotic dosages (doxycycline), and ordering laboratory tests (lyme titer, western blot), which is clearly the doctor's role."
+        },
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "Line 72 is tagged as [patient] but contains clinical explanations about lyme disease complications (heart involvement) and the necessity of intravenous versus oral antibiotics, which is the doctor explaining the rationale for the treatment plan."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            68,
+            68
+          ],
+          "reason": "Line 68 describes the continuation of doxycycline treatment for three weeks and ordering of Lyme titer and Western blot tests, which is clearly doctor speech dictating the plan, but is incorrectly tagged as [patient]."
+        },
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "Line 72 explains ordering blood tests for possible Lyme disease, potential need for IV antibiotics, and risks to other organs, which continues the doctor's explanation seamlessly into line 73, but is incorrectly tagged as [patient]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            68,
+            68
+          ],
+          "reason": "Line 68 contains clinical plan/actions (e.g., ‘we're gonna continue that for about three weeks’ and ‘send a lyme titer as well as a western blot’) that are statements a clinician would make. The content continues the provider's treatment plan and ordering of tests, so the speaker tag should be [doctor], not [patient]."
+        },
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "Line 72 similarly describes the clinician's plan to ‘order some blood tests’ and explains possible need for IV antibiotics — language indicating the speaker is the doctor. The line is incorrectly tagged as [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "valid",
+    "encounter_id": "ACI110",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correct. The doctor leads the conversation with diagnostic questioning and physical examination, while the patient provides the history of the wrist injury and details about their symptoms and personal schedule."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript has correct speaker tags throughout. All [doctor] lines contain appropriate medical questioning, exam descriptions, and treatment advice from a professional perspective, while [patient] lines describe personal symptoms, history, and responses in first-person patient experience. No swaps detected."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            72,
+            72
+          ],
+          "reason": "Line 72 (‘do it as soon as possible i'm going a vacation in a month so’) reads like the clinician giving advice (telling the patient to schedule surgery soon) but is labeled [patient]. This utterance logically belongs to the doctor and the tag appears swapped; the subsequent lines (73–76) show clarification and correction consistent with that mis-tag."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N106",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "The doctor is labeled as speaking about buying a plot of land and moving, which continues the patient's narrative from line 4."
+        },
+        {
+          "lines": [
+            13,
+            13
+          ],
+          "reason": "The doctor's tag is on a line that seems to be a transition or interruption regarding sharing venison, which logically belongs to the patient who has the meat."
+        },
+        {
+          "lines": [
+            15,
+            15
+          ],
+          "reason": "The doctor tag is applied to a line completing the patient's sentence about their breathing not being what it used to be."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "The doctor tag is applied to a line describing symptoms (catching breath/feeling healthy) which is the patient's personal history."
+        },
+        {
+          "lines": [
+            19,
+            19
+          ],
+          "reason": "The doctor is labeled as saying both 'thanks' (responding to the patient's compliment) and asking if the patient feels short of breath; the latter half is correct for a doctor, but the start seems to indicate a role confusion or merged lines."
+        },
+        {
+          "lines": [
+            21,
+            21
+          ],
+          "reason": "The doctor is describing their own sudden shortness of breath, which is patient behavior."
+        },
+        {
+          "lines": [
+            23,
+            23
+          ],
+          "reason": "The doctor is reporting symptoms of watery eyes and confusion about them, which is the patient's role."
+        },
+        {
+          "lines": [
+            25,
+            25
+          ],
+          "reason": "The doctor is speculating on their own allergies ('i always think it's allergies'), which is patient self-reporting."
+        },
+        {
+          "lines": [
+            27,
+            27
+          ],
+          "reason": "The doctor tag is on a brief interjection that continues the patient's thought process."
+        },
+        {
+          "lines": [
+            29,
+            29
+          ],
+          "reason": "The doctor is reporting symptoms of 'eyebugers', which is patient behavior in this context."
+        },
+        {
+          "lines": [
+            31,
+            31
+          ],
+          "reason": "The doctor is describing a personal trip to urgent care and using a nebulizer, which is the patient's medical history."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "reason": "Speaker tags are swapped in these lines. Patient's descriptions of their land purchase, enjoyment of the outdoors with deer, and hunting hobby are tagged as [doctor], while doctor's surprised reaction ('oh') and question about hunting are tagged as [patient]."
+        },
+        {
+          "lines": [
+            15,
+            18
+          ],
+          "reason": "Speaker tags are swapped. Continuation and details of patient's breathing difficulties and self-assessment of health are tagged as [doctor], while doctor's comment on patient's healthy appearance is tagged as [patient]."
+        },
+        {
+          "lines": [
+            23,
+            27
+          ],
+          "reason": "Speaker tags are swapped. Patient's description of sudden shortness of breath episodes, self-diagnosis of allergies, and related thoughts are tagged as [doctor], while doctor's acknowledgments ('mm-hmm', 'okay') are tagged as [patient]."
+        },
+        {
+          "lines": [
+            28,
+            32
+          ],
+          "reason": "Speaker tags are swapped. Doctor's possible anecdote about their dog with watery eyes is tagged as [patient], and patient's reports of eye boogers, prior urgent care visit with nebulizer, and current inhaler use are tagged as [doctor]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            5,
+            9
+          ],
+          "reason": "Lines 5–9 contain first-person narrative and continuing remarks matching the patient’s preceding statement (about buying land and hunting). They read like the patient continuing their story, but are tagged [doctor], while the following short replies (lines 6 and 8) look like the clinician's brief prompts/reactions and are tagged [patient]. This indicates the speaker tags are swapped in this segment."
+        },
+        {
+          "lines": [
+            15,
+            23
+          ],
+          "reason": "Lines 15–23 include multiple first-person symptom reports (e.g., 'isn't what it used to be', 'i seem to catch my breath', 'i get ... shortness of breath', 'eyes they're water') that clearly belong to the patient’s history. These lines are tagged [doctor], suggesting the patient/doctor tags are swapped across this whole stretch."
+        },
+        {
+          "lines": [
+            31,
+            31
+          ],
+          "reason": "Line 31 ('the last time it happened i went to the urgent care and they gave me a nebulizer that helped') is a first-person report of prior care and fits as patient speech, but it is tagged [doctor], indicating a tag swap for this line."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N107",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            20,
+            20
+          ],
+          "reason": "Line 20 is tagged as [patient] but the speaker is answering the doctor's question about their relationship to the 'patient' Bryan, identifying as 'partners'. This line should be tagged as the third party (partner) currently being attributed to the patient tag."
+        },
+        {
+          "lines": [
+            22,
+            22
+          ],
+          "reason": "Line 22 is tagged as [patient] but it contains the doctor acknowledging a previous interaction ('you know who i am') or responding to the partner, though it is likely a misidentification in the source text of the doctor or partner speaking."
+        },
+        {
+          "lines": [
+            24,
+            24
+          ],
+          "reason": "Line 24 is tagged as [patient] but the speaker is clearly the partner discussing Bryan (the patient) in the third person ('he is', 'his pain tolerance')."
+        },
+        {
+          "lines": [
+            26,
+            26
+          ],
+          "reason": "Line 26 is tagged as [patient] but the speaker is the partner continuing to describe the patient's behavior/thoughts in the third person ('he was just thinking')."
+        },
+        {
+          "lines": [
+            28,
+            28
+          ],
+          "reason": "Line 28 is tagged as [patient] but the speaker is the partner deciding to stop interrupting and yield back to the patient ('go back to talking to him')."
+        },
+        {
+          "lines": [
+            40,
+            40
+          ],
+          "reason": "Line 40 is tagged as [patient] but the speaker is the partner advocating for Bryan ('I think he should have an mri')."
+        },
+        {
+          "lines": [
+            42,
+            42
+          ],
+          "reason": "Line 42 is tagged as [patient] but is a comment by the partner regarding the doctor's decision."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors found between doctor and patient dialogues. All [doctor] lines contain appropriate doctor speech (questions, examination, personal anecdotes, diagnosis, and plan). [patient] lines contain patient or accompanying partner's layperson descriptions, concerns, and responses, but no instances where doctor-like speech appears under [patient] or patient-like speech under [doctor]. Note: Partner speech is mis-tagged as [patient], but this is not a doctor-patient swap."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            11,
+            26
+          ],
+          "reason": "Multiple adjacent turns appear to have speaker tags swapped or confused between the clinician, the patient, and a present partner. Examples: line 11 is tagged [doctor] but contains a personal remark about 'my husband' (more consistent with the patient/companion voice). Lines 18–26 are uttered from a companion/partner perspective (referring to 'he' and 'him' and telling the clinician to continue), but are tagged [patient] while clinician prompts/questions in this block are tagged [doctor]. The conversation roles are inconsistent in this segment, indicating swapped/incorrect speaker tags."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N110",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as doctor, but the speaker expresses emotional distress ('I'm so upset too') regarding the shoes that caused the injury, mirroring the patient's sentiment in line 16 and being repeated by the patient in line 18. This line likely belongs to the patient."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as [doctor], but the content 'i'm so upset too i love those shoes' clearly expresses the patient's personal disappointment and affection for the shoes that caused the blister, which would not be said by the doctor. This appears to be a swapped speaker tag, as it logically continues the patient's response from line 16."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            16,
+            18
+          ],
+          "reason": "Lines 16–18 contain repeated, emotional remarks about the shoes that read like patient comments; the turn at line 17 is labeled [doctor] but says “i'm so upset too i love those shoes,” which is unlikely for the clinician and inconsistent with the surrounding Q/A. The sequence appears mis-tagged (duplication and swapped speaker tags) and should be reviewed/corrected."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N111",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            34,
+            35
+          ],
+          "reason": "The tags are swapped at line 34 and 35. In line 34, the speaker is labeled as 'patient' but says 'I'm not suspicious but we're just gon na go with that okay because looking at your vitals it it is of still a bit high', which is clearly the doctor's clinical observation. In line 35, the speaker is labeled as 'doctor' but provides the response 'that's not where we wan na be so i wonder if we might need to adjust your medication', yet it follows the patient's context of discussing diabetic sugar levels."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            34,
+            34
+          ],
+          "reason": "Line 34 is tagged as [patient], but the content discusses the patient's vitals and blood pressure readings (e.g., 'looking at your vitals... a hundred and eighty over... eighty'), expresses discomfort with the readings, and continues the doctor's line of questioning about medication compliance, which is clearly doctor's speech continuing from line 33."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            34,
+            34
+          ],
+          "reason": "Line 34 is labeled [patient] but the content ('looking at your vitals ... it is still a bit high ... i see like a hundred and eighty over ...') is clinical assessment of vital signs and expresses concern about blood pressure — language consistent with the doctor’s role. Surrounding lines (31–35) are part of a clinician-led medication/vitals discussion, so this line appears to have its speaker tag swapped."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N112",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            20,
+            24
+          ],
+          "reason": "Lines 20, 22, and 24 are tagged as [patient] but the content follows a persona (likely a student or a colleague role-playing) explaining clinical reasoning, how to capture 'root signatures' and 'chief complaints', and commenting on patient behavior ('most patients they don't answer the darn questions'), which is characteristic of the clinician/doctor speaking about the process of diagnosis."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            20,
+            24
+          ],
+          "reason": "Speaker tags are swapped in lines 20-24. The content tagged as [patient] consists of extended meta-commentary from a doctor's perspective, demonstrating and explaining how to handle difficult patients who avoid giving a clear chief complaint (e.g., 'most patients they don't answer the darn questions... I love the way that you're trying to redirect'). The short [doctor]-tagged responses ('that's okay', 'absolutely') resemble typical patient affirmations during this role-play demonstration."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            20,
+            20
+          ],
+          "reason": "Line 20 is labelled [patient] but contains extensive clinician-style commentary (e.g., 'i need them to be able to give me a perfect sort of root signature', 'is that four five disk seen on the mri') and meta-observations about taking a history — language and intent characteristic of the doctor, not the patient. The line appears to merge a brief patient answer with a clinician's remarks, so the speaker tag is likely incorrect for at least the clinician portion."
+        },
+        {
+          "lines": [
+            24,
+            24
+          ],
+          "reason": "Line 24 is labelled [patient] but after the initial symptom report it shifts into clinician-facing commentary ('very few patients will give you the perfect history', 'you got ta pull it out of them'), which is doctor-like. This suggests the clinician's remarks were erroneously attributed to the patient on this line."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N114",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            2,
+            -1
+          ],
+          "reason": "Starting from line 2, the speaker tags are consistently swapped. The tag [patient] is interviewing the other person about headaches, conducting a physical exam, and diagnosing 'idiopathic intracranial hypertension', which are roles of the doctor. Conversely, the tag [doctor] describes symptoms like headaches worsening with menstrual cycles and exercise, which is the patient role."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. All lines tagged [patient] contain speech typical of the doctor (greetings, history-taking questions, exam findings like papilledema and normal gait, diagnosis of idiopathic intracranial hypertension, treatment plans including MRI, spinal tap, and neuro-ophthalmology referral), while all lines tagged [doctor] contain speech typical of the patient (symptom descriptions such as headaches behind the right eye, pulsing sensation, ringing in ears, blurred vision, triggers like exercise and menses, shoe preferences, questions about surgery and timing)."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "Throughout the transcript the speaker tags are inverted: lines that contain clinician questions, exam findings, and counseling are labeled [patient], while first‑person symptom reports and responses from the patient are labeled [doctor]. This pattern affects essentially the entire interaction, indicating the patient and doctor tags have been swapped across the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N118",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correct. The speaker tags consistently align with the roles where the doctor asks questions, performs medical assessments, and provides clinical plans, while the patient provides history and symptom descriptions."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            29,
+            29
+          ],
+          "reason": "Line 29 is tagged as [doctor] but contains the patient's first-person report of their home blood pressure readings ('i'm usually like one thirty to one forty over sixty to seventy') immediately following the doctor's question 'so what have those readings been'. This indicates a speaker tag swap error where the patient's response is incorrectly included under the doctor's tag."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swaps detected. The doctor and patient utterances align with their roles and the dialogue context throughout the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N121",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "The line starts with a greeting to 'Kenneth' and mentions medical assistant findings, which is characteristic of a doctor starting an encounter. However, the dialogue continues into the patient's explanation of the injury in the same block, suggesting line 1 contains both speakers or a misattributed start."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "The dialogue in line 17 begins with a response from the patient ('no i'm not a baseball fan') but then shifts midway through to the doctor talking about her husband and 'the meds' (Mets), which is clearly the doctor's persona sharing personal information back to the patient."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 is tagged [patient] but begins with doctor speech greeting the patient by name ('hi kenneth') and referencing information from the medical assistant about knee pain, followed by patient speech describing the skiing injury in the first person."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged [patient] but contains patient speech responding to the doctor's baseball question ('no i'm not a baseball fan but i love spring...') followed by doctor speech chit-chatting ('nice nice i'm i'm not really a baseball fan either but my husband makes me watch the the meds...') sharing a personal anecdote."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 is labeled [patient] but begins with a clinician-style greeting and question directed at the patient (\"hi kenneth... the medical assistant told me that you had some knee pain\"), which is doctor speech. The remainder of the line contains the patient's history. This indicates the speaker tag for the doctor's opening was incorrectly assigned to the patient (mixed/merged utterances)."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is labeled [patient] but contains a clinician-style interjection and comment (\"nice nice i'm i'm not really a baseball fan either...\"), following the patient's reply to the doctor's question in line 16. The line appears to merge both the patient's response and the doctor's brief comment under the patient tag."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "D2N125",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags for [patient] and [doctor] swapped. Line 1 shows the [patient] presenting the case like a clinician, and the [doctor] in Line 2 greets the [patient] as 'doctor'. Throughout the dialogue, the [patient] tag is used for the person performing physical exams, explaining MRI results, and prescribing medication (Tegretol), while the [doctor] tag is used for the person describing symptoms like facial pain and agreeing to treatment."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. Content in [patient]-tagged lines includes doctor-like dialogue such as introducing the patient, greeting by name, asking about symptoms, performing exams, providing diagnosis (e.g., trigeminal neuralgia), discussing treatments and medications (e.g., tegretol, gabapentin), and scheduling follow-ups. Conversely, [doctor]-tagged lines contain patient-like dialogue such as describing facial pain symptoms, history, triggers, responses to questions, agreeing to exams and medications."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "Speaker tags appear to be inverted for the entire transcript: lines labeled [patient] contain clinician utterances (introductions, exam instructions, prescribing, treatment recommendations) while lines labeled [doctor] contain the patient’s symptom reports and history. Examples: line 1 ([patient]) is a clinician introduction of the patient; line 4 ([doctor]) is the patient describing stabbing facial pain; line 24 ([doctor]) gives exam instructions; line 49 ([patient]) is the clinician prescribing medication."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI015",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            34,
+            35
+          ],
+          "reason": "The tags for lines 34 and 35 are swapped. In line 34, the speaker (currently tagged as 'patient') makes clinical observations about vitals and being 'suspicious', while in line 35, the speaker (currently tagged as 'doctor') responds with 'that's not where we want to be' and suggests adjusting medication, which is patient-like behavior in the context of this specific sequence."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            34,
+            34
+          ],
+          "reason": "Line 34 is tagged as [patient] but contains dialogue where the speaker references checking the patient's vitals, notes a high blood pressure reading (e.g., 'a hundred and eighty over you know eighty'), and expresses discomfort with it, which is clearly the doctor's statement continuing from line 33 and leading into line 35. The tag appears swapped; it should be [doctor]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            34,
+            34
+          ],
+          "reason": "Line 34 is tagged [patient] but the content is clinician-style (references vitals, “looking at your vitals… it is still a bit high… I see like a hundred and eighty over…”) — this utterance is the doctor speaking and the speaker tag is swapped."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI017",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "The line starts with 'hi kenneth how are you the medical assistant told me that you had some knee pain', which is discourse typical of a doctor greeting a patient and acknowledging the chief complaint. Then the second half of the cell 'yeah i was getting ready for the holiday weekend...' is the patient's response. This line likely contains both participants' speech, but the initial tag [patient] is incorrect for the first sentence."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "The line starts with the patient's response about outdoor activities, but the second half ('nice nice i'm i'm not really a baseball fan either but my husband makes me watch the meds...') is the doctor sharing personal information and transitioning back to the exam. This indicates a missing or swapped tag within the line."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 is tagged [patient] but begins with the doctor's greeting ('hi kenneth how are you the medical assistant told me that you had some knee pain') followed by the patient's description of their knee injury sustained while water skiing."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged [patient] but starts with the patient's response to the doctor's question about baseball and spring ('no i'm not a baseball fan but i love spring...') and then includes the doctor's casual reply agreeing and mentioning her husband making her watch the Mets ('nice nice i'm i'm not really a baseball fan either...')."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "reason": "Line 1 contains the physician’s opening greeting/questions (“hi kenneth how are you the medical assistant told me that you had some knee pain”) but is labeled [patient]. The content is from the doctor (should be [doctor]) and then the patient’s answer follows in the same line, indicating a speaker-tag error on line 1."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI024",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            20,
+            24
+          ],
+          "reason": "In these lines, the speaker tagged as [patient] stops role-playing as the patient and speaks as a physician, describing clinical workflows, the challenges of getting a 'chief complaint' from patients, and specific anatomical details like 'four five disk' which are characteristic of the doctor's perspective."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swaps detected. The transcript consistently has [doctor] lines with greetings, history-taking questions, exam instructions, and treatment plans, while [patient] lines contain symptom descriptions, pain ratings, responses to questions, and some out-of-character training commentary from the patient actor, but the tags match the roles appropriately without reversal."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            20,
+            20
+          ],
+          "reason": "Line 20 is tagged [patient] but contains clinician-style language and instructions (e.g., 'i need them to be able to give me a perfect sort of root signature', 'is that four five disk seen on the mri') and meta-commentary about taking a history, which strongly suggests this utterance was spoken by the clinician (doctor) rather than the patient."
+        },
+        {
+          "lines": [
+            24,
+            24
+          ],
+          "reason": "Line 24 is tagged [patient] but after initial symptom description it shifts into commentary about other patients and clinical history-taking ('very few patients will give you the perfect history', 'you gotta pull it out of them'), which is characteristic of the doctor’s voice rather than the patient’s."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI033",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are entirely swapped throughout the transcript. Line 1 shows the '[patient]' introducing the case in medical terminology and referring to the patient as a 54-year-old male, a typical doctor's role. Line 2 shows the '[doctor]' greeting 'Doctor Cruz', suggesting the speaker is the patient. Throughout the dialogue, the '[doctor]' describes symptoms like stabbing pain (Line 4) and responds to physical exams (Lines 26, 28, 31, 33), while the '[patient]' asks diagnostic questions, conducts exams, and proposes treatment plans involving medications like Tegretol (Lines 39, 43, 47, 49, 51)."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            22
+          ],
+          "reason": "Speaker tags are swapped throughout the introduction, greetings, symptom description, and history taking section. Doctor's statements and questions are under [patient] tags, and patient's responses under [doctor] tags, with a few short patient responses correctly tagged."
+        },
+        {
+          "lines": [
+            25,
+            29
+          ],
+          "reason": "Speaker tags are swapped during the physical exam sequence involving symmetric smile check, hearing test instructions, and patient confirmations."
+        },
+        {
+          "lines": [
+            39,
+            54
+          ],
+          "reason": "Speaker tags are swapped in the treatment discussion, medication recommendations, side effects, prescription, follow-up planning, and closing. Doctor's explanations under [patient] and patient's responses under [doctor], with some short segments correctly tagged."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            8
+          ],
+          "reason": "Initial exchange appears inverted: lines contain clinician/rooming-staff statements and physician questions but are tagged as [patient], while patient greetings/history are tagged [doctor]. E.g., line 1 is a rooming/clinician note ('miss edwards is here for evaluation...') labeled [patient]; line 2 is the patient greeting the doctor but labeled [doctor]; line 3 is the doctor introducing themselves but labeled [patient]. This indicates the speaker tags are swapped in this block."
+        },
+        {
+          "lines": [
+            10,
+            10
+          ],
+          "reason": "Line 10 contains a clinician exam question ('have you noticed any weakness...') followed immediately by the patient's first-person answer ('not really... my vision seems to be unchanged...'), but the line is tagged [doctor]—the patient statements are labeled as doctor here."
+        },
+        {
+          "lines": [
+            12,
+            14
+          ],
+          "reason": "Lines alternate question/answer content that belongs to the clinician vs patient but are tagged incorrectly. For example, line 12 ('sometimes certain kind of sensory... that seems to trigger it') is patient reporting triggers but tagged [doctor]; line 13 ('okay and anything that you've done...') is a clinician question tagged [patient]; line 14 is an unintelligible fragment tagged [doctor] within this mis-tagged exchange."
+        },
+        {
+          "lines": [
+            16,
+            22
+          ],
+          "reason": "This whole stretch shows clinician questions and instructions labeled as [patient] and patient history/responses labeled as [doctor]. Examples: line 16 is the patient recounting seeing the family doctor but is tagged [doctor]; line 17 is a clinician question ('how long do these episodes last') tagged [patient]; lines 18–22 include the patient's description of duration and pain severity but are tagged [doctor]."
+        },
+        {
+          "lines": [
+            25,
+            28
+          ],
+          "reason": "Exam interaction tags are flipped: line 25 ('that looks nice and symmetric i'm gonna rub my fingers next to your ear...') is clinician speech but labeled [patient]; the brief affirmative replies ('yep') in lines 26 and 28 are patient responses but labeled [doctor]; line 27 is a clinician prompt ('you can hear it on the other side as well') labeled [patient]."
+        },
+        {
+          "lines": [
+            38,
+            39
+          ],
+          "reason": "Line 38 mixes the physician explanation with a patient question ('how do we treat it') but is tagged [doctor]; line 39 contains the clinician treatment recommendation ('the first line would be to try... gabapentin') yet is tagged [patient]. These indicate swapped tags in this Q/A about treatment."
+        },
+        {
+          "lines": [
+            43,
+            44
+          ],
+          "reason": "Discussion of surgery/medication choice is mis-tagged: line 43 reads like the clinician explaining the root cause and surgical consideration but is tagged [patient]; line 44 contains the patient asking which to try followed by the clinician's recommendation, yet the line is tagged [doctor] while the roles in the content are mixed/misassigned."
+        },
+        {
+          "lines": [
+            47,
+            52
+          ],
+          "reason": "Closing treatment/follow-up sequence contains multiple mis-tags. Line 47 continues the clinician's discussion of side effects/genetic testing but is tagged [patient]; line 48 ('okay sounds good let's do it') is the patient agreement but tagged [doctor]; lines 49–52 (prescription plan and follow-up timing) contain clinician instructions and patient scheduling comments that are inconsistently tagged (many clinician utterances labeled [patient] and some patient replies labeled [doctor])."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI045",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            2,
+            -1
+          ],
+          "reason": "Starting from line 2, the speaker tags are consistently swapped. Line 2 shows the '[patient]' addressing the other person as 'Julie' and asking 'how are you doing today', which is behavior typical of a doctor. Line 3 shows the '[doctor]' complaining about their own 'headaches'. Throughout the rest of the dialogue, the '[patient]' performs the physical exam, explains the diagnosis (idiopathic intracranial hypertension), and orders an MRI, while the '[doctor]' reports symptoms and asks about treatment."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. All lines tagged as [doctor] contain patient speech (e.g., describing personal symptoms, headaches, running habits, questions about diagnosis and surgery), while all lines tagged as [patient] contain doctor speech (e.g., greeting the patient, asking medical history, performing and narrating exam findings, providing diagnosis of idiopathic intracranial hypertension, recommending tests like MRI and spinal tap)."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "Speaker tags appear to be reversed for the entire transcript: clinician utterances (greeting, history questions, exam findings, diagnosis and plan) are labeled [patient], while the patient's symptom reports and questions are labeled [doctor]. Examples: line 2 is tagged [patient] but is a clinician greeting; line 3 is tagged [doctor] but is the patient describing headaches; lines 26–29 contain the clinician's exam and diagnosis but are tagged [patient], and lines 30–33 are the patient's follow-up questions/responses but are tagged [doctor]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI062",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as [doctor] but the content 'i'm so upset too i love those shoes' is a repetition or continuation of the patient's sentiment regarding their footwear, as the doctor is the one asking questions about the shoes in the preceding and following lines."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as [doctor], but the content 'i'm so upset too i love those shoes' expresses personal emotional attachment and upset over the shoes, which is characteristic of patient speech rather than a professional doctor's response to the patient's situation."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            16,
+            18
+          ],
+          "reason": "After the doctor asks about wearing the same shoes (line 15), the patient should respond expressing upset/attachment to the shoes. Lines 16–18 contain duplicated/overlapping content ('i'm so upset... i love those shoes') with the doctor tagged in line 17 speaking what appears to be the patient's sentiment. This indicates a swapped/incorrect speaker tag(s) in this short block."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test1",
+    "encounter_id": "ACI066",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            5,
+            17
+          ],
+          "reason": "The doctor describes moving to a plot of land and being a hunter (lines 5-13), but then mentions catching their breath and considering themselves healthy (line 17) which is patient-characteristic symptom reporting. Conversely, the patient acts as the respondent or makes doctor-like observations (lines 16 and 18). Tags appear swapped in this range as the conversational roles are inverted."
+        },
+        {
+          "lines": [
+            21,
+            31
+          ],
+          "reason": "The speaker tagged as 'doctor' describes experiencing symptoms like sudden shortness of breath, watery eyes, 'eyebugers', and a personal history of going to urgent care for a nebulizer (lines 21, 23, 25, 27, 29, 31). These are patient experiences. The speaker tagged 'patient' is providing short affirmations or talking about their dog (lines 22, 24, 26, 28, 30), which is inconsistent with the 'doctor' reporting symptoms."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            5,
+            31
+          ],
+          "reason": "Speaker tags are swapped throughout this range. The patient recounts personal history including moving to the city, buying land, enjoying deer and hunting, having venison, experiencing shortness of breath, watery eyes, suspecting allergies, mentioning their dog with similar symptoms, visiting urgent care for a nebulizer, and using an inhaler; these first-person descriptions are tagged as [doctor]. The doctor's short reactions, affirmations, and questions (e.g., 'oh', 'sure', 'you look pretty healthy', 'hmmm') are tagged as [patient]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            5,
+            13
+          ],
+          "reason": "Lines 5–13 contain first-person statements about moving, land, hunting, and venison that read as the patient speaking, but many of those lines are tagged [doctor] while the interlocutor responses are tagged [patient], indicating the speaker tags are swapped in this block."
+        },
+        {
+          "lines": [
+            15,
+            31
+          ],
+          "reason": "Lines 15–31 include the patient’s symptom report and history (e.g., 'isn't what it used to be', 'i seem to catch my breath', 'the last time it happened i went to the urgent care...') but these are tagged [doctor] while the shorter acknowledgements/questions are tagged [patient], indicating the speaker tags are swapped across this range."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "D2N147",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            5,
+            6
+          ],
+          "reason": "In line 5, the doctor tag is assigned to text that continues the patient's story about playing football and being tackled. In line 6, the patient tag is assigned to a continuer of the clinical story ('landed on my shoulder... bothered me') followed by the doctor actually responding with 'okay alright' in line 7. Thus, the tags in lines 5 and 6 are swapped."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 continues the patient's story from line 4 about playing pick-up football, getting older, trying to play again, and getting tackled, which describes the patient's personal experience. This should be tagged as [patient], not [doctor]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 contains first-person continuation of the patient’s narrative (mentions being tackled, ‘me being a little bit older’, etc.) and clearly continues the story from line 4. The speaker tag [doctor] is incorrect and should be [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "D2N148",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The entire transcript correctly identifies the doctor as the one asking clinical questions and performing the physical exam, while the patient provides the history of injury and symptoms."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line 7 tagged as [doctor] contains a description of the patient's personal symptoms in the first person ('it felt like i was gon na tapple over... my right toe... tingled'), which belongs to the patient, followed by a doctor's follow-up question, indicating a speaker tag swap error where patient speech is misattributed to the doctor."
+        },
+        {
+          "lines": [
+            11,
+            11
+          ],
+          "reason": "Line 11 tagged as [doctor] contains a description of the patient's personal back pain experience in the first person ('if i turn a certain way or if i roll over in my sleep i'll wake up from... sharp pain'), which belongs to the patient, followed by a doctor's follow-up question, indicating a speaker tag swap error where patient speech is misattributed to the doctor."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line 7 is tagged [doctor] but contains first-person patient symptom descriptions (\"for a very short period of time it felt like i was gonna topple over... toes on my right foot tingled\"), indicating this utterance should be attributed to the patient or split into a doctor question + patient response rather than entirely to the doctor."
+        },
+        {
+          "lines": [
+            11,
+            11
+          ],
+          "reason": "Line 11 is tagged [doctor] but includes first-person patient statements about pain with movement and sleeping (\"if i turn a certain way or if i roll over in my sleep i'll wake up from it... that goes away if i position myself the right way\"), so this portion appears misattributed and should be the patient's speech."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "D2N153",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            54,
+            55
+          ],
+          "reason": "Line 54 starts with the doctor asking a question, but then immediately includes a first-person response about symptoms and gardening. Line 55 is labeled as the patient continuing that description, but the structure of line 54 indicates the speaker tag for 54 should have switched to the patient halfway through, or 54 contains part of the patient's answer which is then continued in 55. This results in the doctor's label appearing on patient-specific narrative content."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            54,
+            54
+          ],
+          "reason": "Line 54 is tagged as [doctor] but begins with a doctor question followed by the patient's personal response describing their symptom stability over two weeks and specific activities like gardening and moving pots that worsen symptoms, indicating a speaker tag swap error where patient dialogue is incorrectly attributed to the doctor."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            54,
+            54
+          ],
+          "reason": "Line 54 is labeled [doctor] but contains the patient’s first-person response (“i think pretty much for the last two weeks...”) following the doctor’s question; the speaker tag appears misassigned and should be [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "D2N158",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correct. The doctor correctly performs the intake, asks about symptoms (abdominal pain, nausea), reviews medications (metformin, flovent), and provides the physical exam findings and treatment plan. The patient appropriately describes their history (caffeine intake, spicy food) and symptoms."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors found. The dialogue flows logically with the doctor asking questions, providing medical history recall, exam findings, and treatment plans in [doctor] tagged lines, while the patient responds in first person about personal symptoms, history, and agreements in [patient] tagged lines. Casual conversation elements like coffee discussion are consistent with the doctor's speech patterns."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            27,
+            27
+          ],
+          "reason": "Line 27 is labeled [doctor] but contains a patient response ('no actually it looks like last visit we increased that to five hundred milligrams twice per day is that correct'). The line appears to combine the doctor's question and the patient's reply; the response portion should be tagged [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "ACI065",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correct. The speaker with the [doctor] tag initiates the clinical encounter, reviews the patient's medical history (diabetes type two and asthma), performs a physical examination, and provides a treatment plan (medication adjustments for metformin and flovent). The speaker with the [patient] tag describes symptoms of abdominal pain, caffeine intake, and lifestyle factors consistent with a patient seeking care."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swaps detected. The transcript is correctly tagged: the doctor introduces the patient, asks detailed history questions about symptoms, diabetes, and asthma, engages casually about coffee, summarizes the exam, provides assessment and plan including prescriptions and follow-up, while the patient consistently responds with personal symptoms, history, and agreements."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            15,
+            15
+          ],
+          "reason": "Line 15 is tagged [doctor] but is a brief agreement ('that's') that belongs to the patient in the surrounding exchange about coffee (lines 14 and 16 are patient lines). The doctor then resumes at line 17, so line 15 appears to be mis-tagged and should be [patient]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "ACI089",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            54,
+            55
+          ],
+          "reason": "In line 54, the doctor asks a question but then immediately provides the patient's subjective history ('I think pretty much for the last two weeks...'). In line 55, the patient tag continues the narrative about gardening and exertion, but it is clear that the content from the second half of line 54 through line 55 should be attributed to the patient, while only the first sentence of 54 is the doctor's query."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            54,
+            54
+          ],
+          "reason": "Line 54 is tagged as [doctor], but after the initial question 'okay do you feel like your symptoms are getting worse or better', it continues with patient dialogue describing their symptoms as stable over the last two weeks and only worsening with exertion (e.g., 'i think i think pretty much for the last two weeks they've remained about the same'), which matches the patient's perspective and is continued correctly by the [patient] tag in line 55."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "I found no instances where patient and doctor speaker tags appear swapped. The dialogue content and turn-taking (doctor asking questions, patient answering, doctor giving exam findings and plan) are consistent throughout the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "ACI099",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The speaker tags are correctly assigned throughout the transcript. The 'doctor' initiates medical questions, performs the physical exam, and provides the diagnosis/plan, while the 'patient' provides medical history and symptoms."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line 7 tagged as [doctor] contains an initial doctor question about symptoms, followed by a detailed patient description of instability and tingling in the foot ('for a very short period of time it felt like i was gon na tapple over...'), and ends with another doctor question about ongoing symptoms. The patient speech appears swapped into the doctor's line."
+        },
+        {
+          "lines": [
+            11,
+            11
+          ],
+          "reason": "Line 11 tagged as [doctor] contains a doctor question about back pain, followed by a patient description of sharp pain when turning or rolling over ('if i turn a certain way or if i roll over in my sleep...'), and ends with a doctor question about pain medication. The patient speech appears swapped into the doctor's line."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            7,
+            7
+          ],
+          "reason": "Line 7 is tagged [doctor] but contains both the doctor's question and the patient's response. The segment beginning 'for a very short period of time it felt like i was gon na tapple over...' is patient content misattributed to the doctor."
+        },
+        {
+          "lines": [
+            11,
+            11
+          ],
+          "reason": "Line 11 is tagged [doctor] but includes the patient's description of when the pain wakes him up ('if i turn a certain way or if i roll over in my sleep i'll wake up from it...'), indicating mixed speaker content and misattribution."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test2",
+    "encounter_id": "ACI101",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            5,
+            6
+          ],
+          "reason": "Line 5 is labeled as [doctor] but contains the continuation of the patient's story about playing tackle football and getting tackled. Line 6 is labeled as [patient] but is the second half of that same sentence/narrative, effectively splitting the patient's response and mislabeling the first part."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 continues the patient's story of injuring their shoulder during a football game from line 4 ('with the playing') and precedes more patient description in line 6, indicating it should be tagged as [patient] rather than [doctor]."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 is labeled [doctor] but the content is a first-person patient narrative continuing the story started in lines 4–6 (describing being tackled and injured). This line should be tagged [patient], so the speaker tag is swapped for this line."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "D2N186",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            9,
+            9
+          ],
+          "reason": "Line 9 is tagged as [doctor] but contains the patient's medical history (microdiscectomy, disk breaking off) and slang ('poop sac'), which is inconsistent with the doctor's role."
+        },
+        {
+          "lines": [
+            10,
+            10
+          ],
+          "reason": "Line 10 is tagged as [patient] but the speaker is interviewing the other person about symptoms ('what kind of symptoms did you have') and responding to the description of pain, which is the doctor's role."
+        },
+        {
+          "lines": [
+            13,
+            13
+          ],
+          "reason": "Line 13 is tagged as [doctor] but contains the patient's personal experience with gabapentin ('I was highly highly dosed up')."
+        },
+        {
+          "lines": [
+            14,
+            14
+          ],
+          "reason": "Line 14 is tagged as [patient] but the speaker is asking a follow-up medical question ('was that hard to withdraw from'), which is the doctor's role."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as [doctor] but suddenly transitions from doctor talk to the patient describing their significant other's advice."
+        },
+        {
+          "lines": [
+            57,
+            57
+          ],
+          "reason": "Line 57 is tagged as [doctor] and the doctor agrees to prescribe Demerol immediately following a line where the doctor (erroneously tagged as patient) refused narcotics in line 55; however, based on the flow of lines 54-56, the roles in 57-58 are likely correct or part of an incongruous exchange, but 9-14 clearly show structural swaps."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line tagged as doctor includes continuation of patient's symptom description ('left back pain') which belongs to the patient from line 4, followed by a doctor question."
+        },
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "reason": "Speaker tags swapped in this range. Line 9 tagged doctor contains doctor's questions mixed with patient's detailed surgery history ('microdiscectomy my disk broke off... thecal sac') and responses. Line 10 tagged patient contains patient's response ('that's good to know'), doctor's question ('what kind of symptoms...'), and patient's symptoms."
+        },
+        {
+          "lines": [
+            13,
+            15
+          ],
+          "reason": "Speaker tags swapped. Line 13 tagged doctor has doctor's question followed by patient's medication history ('they did i was highly... gabapentin'). Line 14 tagged patient has doctor's question ('was that hard to withdraw from'). Line 15 tagged doctor starts with patient's response ('yeah it was terrible') followed by doctor's summary."
+        },
+        {
+          "lines": [
+            17,
+            19
+          ],
+          "reason": "Speaker tags swapped. Line 17 tagged doctor has doctor's question followed by patient's response about stretching and significant other. Line 18 tagged patient has doctor's comment ('she sounds smart'). Line 19 tagged doctor starts with patient's agreement ('yeah she is') followed by doctor's continuation."
+        },
+        {
+          "lines": [
+            23,
+            23
+          ],
+          "reason": "Line tagged as doctor contains patient's description of how the pain occurs ('honestly it it just happens'), continuing from prior patient lines about triggers."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "reason": "Lines 9–10 appear swapped: line 9 (tagged [doctor]) contains the patient’s surgical history/description (e.g., “microdiscectomy… my disk broke off…”), while line 10 (tagged [patient]) contains what reads like the doctor’s follow-up question (“that’s good to know what kind of symptoms did you have…”). The speakers are reversed across these turns."
+        },
+        {
+          "lines": [
+            13,
+            14
+          ],
+          "reason": "Lines 13–14 appear swapped: line 13 (tagged [doctor]) contains both the doctor’s question and the patient’s answer about heavy dosing on gabapentin, and line 14 (tagged [patient]) contains a clinician-style question (“was that hard to withdraw from”). The patient/doctor roles are inverted in these two lines."
+        },
+        {
+          "lines": [
+            17,
+            18
+          ],
+          "reason": "Lines 17–18 appear swapped: line 17 (tagged [doctor]) contains the patient’s reply about their partner telling them to stretch, while line 18 (tagged [patient]) contains the clinician’s response/comment (“she sounds smart”). The speaker tags are reversed for these turns."
+        },
+        {
+          "lines": [
+            23,
+            23
+          ],
+          "reason": "Line 23 appears mis-tagged: it is labeled [doctor] but the content (“honestly it it just happens”) is patient speech (continuation of the patient’s fragment in line 22). This single line’s speaker tag is incorrect."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "D2N187",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript correctly identifies the doctor as the one performing the medical assessment, asking about symptoms (visual distortions, blood pressure, smoking), and explaining the diagnosis (AMD) and treatment plan (Lucentis injections). The patient correctly provides personal history and responds to the medical inquiries."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors detected. Although lines 8-15 contain meta-discussion about scripts and rehearsal elements indicating out-of-character conversation between participants, the content does not show clear reversals where patient-like responses are tagged as doctor or vice versa. The medical history, symptoms, examination, diagnosis, and plan in later lines are correctly attributed to the doctor, and patient responses remain consistent with patient role."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            8,
+            11
+          ],
+          "reason": "Lines 8–11 contain inconsistent speaker content suggesting swapped tags. Line 10 ([patient]) uses clinician-style phrasing (“i wonder if patient has history of …”) that would more naturally be spoken by the doctor, while line 11 ([doctor]) begins with a patient-style statement (“macular degeneration yeah yeah i was…”) before continuing with the clinician’s scripted phrasing. This mismatch indicates the speaker tags are likely incorrect in this segment."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "D2N190",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags [patient] and [doctor] swapped throughout. Line 7 shows the [patient] asking 'what can i do for you today', which is a provider's opening, and the [doctor] replying in line 8 about falling off a bike. This reversal continues through the physical exam and the final diagnosis and treatment plan provided by the 'patient' tag."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. All lines tagged as [patient] contain dialogue that logically belongs to the doctor (e.g., greetings by name, medical history questions, exam instructions, diagnoses, treatment plans), while lines tagged as [doctor] contain patient responses (e.g., symptom descriptions, answers to questions, personal anecdotes). This reversal is consistent across the full dialogue, including chit-chat at the end."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            7,
+            116
+          ],
+          "reason": "From line 7 through line 116 the patient and doctor speaker tags appear consistently swapped. Examples: line 7 ('what can i do for you today') is a clinician prompt but labeled [patient]; lines 12 and 14 contain the injury narrative (patient) but are labeled [doctor]; lines 39–56 contain examination findings and assessment language (clinician) but are labeled [patient]; lines 85–96 and 101–116 contain management, imaging and prescription discussion (clinician) but are labeled [patient], while brief responses from the patient in those stretches are labeled [doctor]. Lines before 7 and after 116 appear correctly labeled."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "D2N195",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            27,
+            28
+          ],
+          "reason": "In line 27, the doctor begins to ask about blood pressure, but then starting at 'I think today', the doctor's tag is providing the patient's data. In line 28, the patient tag explains the blood pressure reading and mentions 'we talked about you getting a blood pressure cuff', which is physician behavior."
+        },
+        {
+          "lines": [
+            50,
+            51
+          ],
+          "reason": "In line 50, the patient tag is used to give medical advice about seeds, antioxidants, and sugar content. In line 51, the doctor tag is used for a sentence fragment ('your diabetes isn't going so low...') that completes the medical warning started in the previous line."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            50,
+            50
+          ],
+          "reason": "Line 50 is tagged as [patient] but contains speech from the doctor responding to the patient's question about strawberries lowering blood pressure. The content discusses pomegranate seeds/antioxidants, hedges on trying strawberries, then advises against it due to high sugar content harmful for diabetes ('you can try it if you want actually no i i do n't want you to eat too many strawberries because a lot of sugar'), continuing seamlessly from line 49 and into line 51, which no patient would say to their doctor."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swap detected. Questions and responses consistently align with doctor vs. patient roles. Occasional informal phrasing (e.g., \"you're about 140 over 80\" or a reiterated \"ow\") is conversational but does not indicate swapped speaker tags."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "D2N200",
+    "transcript_version": "asr",
+    "models_with_errors": [
+      "x-ai/grok-4.1-fast"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correctly labeled. The doctor (lines 1, 3, 5, etc.) is consistently asking clinical questions, performing a physical exam (line 23), and providing a treatment plan (lines 25, 27). The patient (lines 2, 4, 6, etc.) is consistently reporting symptoms, medical history, and non-compliance with diet and medication."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as [doctor] but contains casual, personal sharing about loving McDonald's, preferring Big Macs with large fries, and asking the patient's favorite McDonald's treat. This is characteristic of patient banter and non-compliance deflection, not professional medical dialogue from a doctor advising on a low-sodium diet."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker-tag swaps detected. Throughout the transcript, the speaker roles are consistent: the doctor asks questions, offers assessments and plans, and the patient provides history, symptoms, and brief responses (including the McDonald’s comment and Filet-O-Fish). Dialogue content aligns with the assigned [doctor]/[patient] tags."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "ACI003",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The entire transcript has the speaker tags [patient] and [doctor] swapped throughout. The [patient] tag is consistently associated with clinical questions, physical examination instructions ('let me see the other knee'), medical diagnosis (PCL injury), and prescribing plans. Conversely, the [doctor] tag is used for the person describing the mechanism of injury (falling off a tandem bike), their occupation (NICU baby rocker), and asking about physical therapy frequency."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            1,
+            -1
+          ],
+          "reason": "The speaker tags are swapped throughout the entire transcript. All lines tagged [patient] contain dialogue typical of the doctor (greetings, questions about symptoms and history, exam instructions and findings, diagnosis, treatment plan), while lines tagged [doctor] contain dialogue typical of the patient (responses, descriptions of injury and symptoms, affirmations). Some lines appear merged with both speakers' contributions, but the predominant pattern confirms a consistent swap of speaker tags."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            7,
+            136
+          ],
+          "reason": "Starting at line 7, the speaker tags appear to be swapped for the remainder of the transcript. Lines labeled [patient] contain clinician questions, exam instructions, and management planning (e.g., line 7 \"what can i do for you today\", line 27 \"let's take a peek at your knee here\", line 85 \"so did you already have x-rays...\", and many exam/plan lines), while lines labeled [doctor] contain the patient's history and personal details (e.g., line 8 \"well i think i like fell off of my tandem bike...\", line 20 \"well i work in a children's hospital...\", line 46 \"all the way back\" describing range of motion). This pattern indicates the patient/doctor tags are reversed from line 7 through the end of the transcript."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "ACI012",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            28,
+            28
+          ],
+          "reason": "The doctor's tag should be on line 28 because the speaker is providing clinical data ('about one forty over eighty') and talking about previous discussions ('we talked about you getting a blood pressure cuff')."
+        },
+        {
+          "lines": [
+            50,
+            51
+          ],
+          "reason": "The tags for lines 50 and 51 are swapped. Line 50 contains medical advice/caution regarding antioxidants and sugar content which should be attributed to the doctor, while line 51 contains content that appears to be the doctor continuing their own thought or reacting, but the tags used result in the patient providing the medical reasoning for avoiding sugar."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            28,
+            29
+          ],
+          "reason": "The speaker tags for lines 28 and 29 are swapped. Line 28 has the doctor reporting the patient's blood pressure as 140/80 today, noting it is a little high, and reminding the patient about getting a home blood pressure cuff since they do not check it often. Line 29 'okay' is the patient's simple acknowledgment of the doctor's statement."
+        },
+        {
+          "lines": [
+            50,
+            50
+          ],
+          "reason": "Line 50 has swapped speaker tag. The content discusses alternatives like pomegranate seeds but advises against strawberries due to high sugar content harmful for the patient's diabetes ('actually no i i do n't want you to eat too many strawberries because a lot of sugar'), which is doctor giving dietary advice, not patient speech."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            28,
+            28
+          ],
+          "reason": "Line 28 is labeled [patient] but begins by reporting the patient’s blood pressure and referencing prior counseling (\"you're about one forty over eighty... we talked about you getting a blood pressure cuff\"), which is clinician speech. It appears part of the doctor's response was mis-tagged as the patient."
+        },
+        {
+          "lines": [
+            50,
+            50
+          ],
+          "reason": "Line 50 is labeled [patient] but contains clinician advice (telling the patient not to eat too many strawberries because of sugar). This portion of the doctor's response appears merged into a line tagged as the patient."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "ACI013",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The speaker tags are correctly assigned throughout the transcript. The doctor asks clinical questions, reviews medical history (hypertension, diabetes), and proposes a diagnostic plan (EKG, aspirin), while the patient describes symptoms (elbow pain, chest pain) and medical habits."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors found. The transcript consistently assigns doctor lines to medical history review, questioning, physical exam descriptions, assessments, and treatment plans, while patient lines contain symptom descriptions, brief responses, and personal anecdotes, with no instances of swapped roles."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            32,
+            32
+          ],
+          "reason": "Line 32 is tagged [patient] but contains the continuation/completion of the clinician's utterance ('average') that belongs to the doctor’s sentence in lines 31–33. The tag should be [doctor]."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "ACI064",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "google/gemini-3-flash-preview",
+      "x-ai/grok-4.1-fast",
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            9,
+            9
+          ],
+          "reason": "Line 9 is tagged as [doctor] but contains the patient describing their medical history, details of their microdiscectomy surgery, and internal sensations."
+        },
+        {
+          "lines": [
+            10,
+            10
+          ],
+          "reason": "Line 10 is tagged as [patient] but contains the medical inquiry 'what kind of symptoms did you have' and a follow-up assessment of 'horrible pain', which are clinical questions/assessments typically performed by a doctor."
+        },
+        {
+          "lines": [
+            13,
+            13
+          ],
+          "reason": "Line 13 is tagged as [doctor] but contains both a doctor's question and a patient's response ('they did i was highly highly dosed up on gabapentin') within the same block."
+        },
+        {
+          "lines": [
+            15,
+            15
+          ],
+          "reason": "Line 15 is tagged as [doctor] but contains a patient's response ('yeah it was terrible') followed by a doctor's clinical observation about withdrawal and side effects."
+        },
+        {
+          "lines": [
+            17,
+            17
+          ],
+          "reason": "Line 17 is tagged as [doctor] but contains a patient's description of their significant other's advice regarding stretching and its efficacy."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            9,
+            10
+          ],
+          "reason": "Speaker tags appear swapped. Line 9 tagged as [doctor] contains patient first-person description of their surgery ('microdiscectomy my disk broke off... thecal sac... poop sac'). Line 10 tagged as [patient] starts with a doctor question ('what kind of symptoms did you have with that') followed by patient symptoms."
+        },
+        {
+          "lines": [
+            13,
+            15
+          ],
+          "reason": "Speaker tags appear swapped in this range. Line 13 tagged [doctor] includes patient response about medications ('they did i was highly... gabapentin'). Line 14 tagged [patient] is a doctor question ('was that hard to withdraw from'). Line 15 tagged [doctor] starts with patient answer ('yeah it was terrible') followed by doctor comment."
+        },
+        {
+          "lines": [
+            17,
+            18
+          ],
+          "reason": "Speaker tags appear swapped. Line 17 tagged [doctor] ends with patient first-person account of what helps pain ('so my beautiful significant other... stretch and it always works'). Line 18 tagged [patient] is doctor's comment ('she sounds smart')."
+        },
+        {
+          "lines": [
+            23,
+            23
+          ],
+          "reason": "Line 23 tagged [doctor] contains patient description of unpredictable pain onset ('honestly it it just happens'), continuing from prior patient speech."
+        },
+        {
+          "lines": [
+            5,
+            5
+          ],
+          "reason": "Line 5 tagged [doctor] begins with symptom location description ('left back pain') that logically continues the patient's prior statement in line 4 about lower back pain."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            5,
+            24
+          ],
+          "reason": "Multiple lines in this region contain mixed or swapped speaker content. Examples: line 5 is labeled [doctor] but begins as a continuation of the patient ('left back pain') then includes the doctor question ('when was your back surgery'); line 9 (tagged [doctor]) contains both the doctor prompt ('wow what happened what did they do') and the patient answer ('microdiscectomy my disk broke off...'); line 10 is labeled [patient] but is the doctor asking ('what kind of symptoms did you have') followed by the patient describing symptoms; line 13 similarly mixes a doctor question and a patient response; lines 14–15, 17–19 and line 23 likewise show speaker-tag mismatches (patient content labeled [doctor] or doctor prompts labeled [patient]). These indicate the speaker tags are incorrect or lines were merged/split improperly between lines 5 and 24."
+        }
+      ]
+    }
+  },
+  {
+    "subset": "aci",
+    "split": "test3",
+    "encounter_id": "ACI083",
+    "transcript_version": "asrcorr",
+    "models_with_errors": [
+      "openai/gpt-5-mini"
+    ],
+    "errors": {
+      "google/gemini-3-flash-preview": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "The transcript is correctly labeled. The doctor (lines 1, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29) consistently acts as the medical professional providing diagnosis and exam results, while the patient (lines 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28) answers history questions and reports symptoms."
+        }
+      ],
+      "x-ai/grok-4.1-fast": [
+        {
+          "lines": [
+            -1,
+            -1
+          ],
+          "reason": "No speaker tag swap errors detected. The transcript appears to be correctly tagged. Although early lines contain out-of-character meta-discussion about scripts (likely from a role-play rehearsal), the content aligns with the assigned speaker tags: patient actor lines under [patient] and doctor actor lines under [doctor]. Later lines follow standard doctor-patient dialogue patterns without swaps."
+        }
+      ],
+      "openai/gpt-5-mini": [
+        {
+          "lines": [
+            10,
+            10
+          ],
+          "reason": "Line 10 (‘maybe a different one i wonder if patient has history of’) uses clinician/scribe phrasing (‘patient has history of’) and appears to be the provider speaking but is tagged [patient]. No other lines show clear speaker-tag swaps."
+        }
+      ]
+    }
+  }
+]
